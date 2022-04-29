@@ -3,12 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Sophia's Quiz</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <header>
+      <!-- contains a nav bar-->
+      <nav>
+        <!-- nav bar is a flex box that contains two anchor tags 'home' and 'highscores'-->
+        <a>Home</a>
+        <a>High Scores</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- main section-->
+      <section>
+        <!-- section will have an id called #start-quiz-banner-->
+        <!-- section will contain a h1, description and a div with a button inside-->
+        <h1>Title</h1>
+        <p>Description</p>
+        <div>
+          <button type="button">
+            Start Game
+            <!-- when you click the button it calls the function startQuiz which will remove the <section> and replace with questions-->
+          </button>
+        </div>
+      </section>
+    </main>
     <script src="./assets/index.js" async defer></script>
   </body>
 </html>
