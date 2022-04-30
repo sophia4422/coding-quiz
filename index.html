@@ -9,28 +9,66 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <!-- contains a nav bar-->
-      <nav>
+      <nav class="navbar">
         <!-- nav bar is a flex box that contains two anchor tags 'home' and 'highscores'-->
-        <a>Home</a>
-        <a>High Scores</a>
+        <a class="home">Home</a>
+        <a class="scores">High Scores</a>
       </nav>
     </header>
 
     <main>
       <!-- main section-->
-      <section>
+      <section class="section-container">
         <!-- section will have an id called #start-quiz-banner-->
         <!-- section will contain a h1, description and a div with a button inside-->
-        <h1>Title</h1>
-        <p>Description</p>
+        <h1 class="title">General Knowledge Quiz</h1>
+        <p class="quiz-descrip">
+          This quiz will test your knowledge on random topics. Can you beat the
+          timer and get the highest score?
+        </p>
         <div>
-          <button type="button">
-            Start Game
+          <button type="button" class="start-button">
+            Start Quiz
             <!-- when you click the button it calls the function startQuiz which will remove the <section> and replace with questions-->
           </button>
         </div>
+      </section>
+
+      <!-- this section will contain the timer for the questions -->
+      <section class="timer-section">
+        <div class="timer">
+          Time Remaining:
+          <!-- span contains the timer -->
+          <span id="timer-span">60</span>
+        </div>
+      </section>
+      <!-- this section will contain the question and answers -->
+      <section id="question-section" class="question-container">
+        <h2 class="question">Question 1</h2>
+        <ul class="answer-container">
+          <li class="answers">Answer 1</li>
+          <li class="answers">Answer 1</li>
+          <li class="answers">Answer 1</li>
+          <li class="answers">Answer 1</li>
+        </ul>
+        <div>
+          <!-- render alert function in this div-->
+        </div>
+      </section>
+
+      <!-- This section will be for the form at the end -->
+      <section id="form-section" class="form-container">
+        <form>
+          <div id="full-name-input">
+            <label>Name</label>
+            <input />
+          </div>
+          <div class="submit-container">
+            <button class="submit-button">Submit</button>
+          </div>
+        </form>
       </section>
     </main>
     <script src="./assets/index.js" async defer></script>
