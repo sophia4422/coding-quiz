@@ -6,9 +6,52 @@ const startButton = document.getElementById("start-btn");
 //target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
+//target main section - for appending later
+const mainElement = document.getElementById("main");
+
+//target question section
+
+//target timer section
+
 //function to render question on page
 const renderQuestion = () => {
   console.log("render question 1");
+  //create section
+  const section = document.createElement("section");
+  section.setAttribute("class", "question-container");
+
+  //create h2
+  const h2 = document.createElement("h2n");
+  section.setAttribute("class", "question");
+  // questions need to be in an array
+  h2.textContent = "What is the capital of Brazil?";
+
+  //create ul and append 4 li
+  const ul = document.createElement("ul");
+  ul.setAttribute("class", "answer-container");
+
+  const li1 = document.createElement("li");
+  li1.setAttribute("class", "answers");
+  li1.textContent = "Brasilia";
+
+  const li2 = document.createElement("li");
+  li2.setAttribute("class", "answers");
+  li2.textContent = "Rio de Janeiro";
+
+  const li3 = document.createElement("li");
+  li3.setAttribute("class", "answers");
+  li3.textContent = "Sao Paulo";
+
+  const li4 = document.createElement("li");
+  li4.setAttribute("class", "answers");
+  li4.textContent = "Ouro Preto";
+
+  ul.append(li1, li2, li3, li4);
+
+  //append h2 and ul to section
+  section.append(h2, ul);
+
+  //append question section to main element
 };
 
 //function to remove general know / start section on page
