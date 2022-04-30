@@ -67,11 +67,12 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  display: none; /* CHANGE LATER */
+  /*display: none; /* CHANGE LATER */
 }
 
 .question {
   padding: 20px;
+  text-align: center;
 }
 
 .answer-container {

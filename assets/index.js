@@ -9,6 +9,49 @@ const startSection = document.getElementById("start-quiz-banner");
 //target main section - for appending later
 const mainElement = document.getElementById("main");
 
+//current question index
+let questionIndex = 0;
+
+//array of questions
+const questions = [
+  {
+  question: "What is the capital of Brazil?",
+  answers: [
+  { text: 'Brasilia', correct: true },
+  { text: 'Rio de Janeiro', correct: false},
+  { text: 'Sao Paulo', correct: false},
+  { text: 'Ouro Preto', correct: false},
+  ]
+  },
+  {
+    question: "What does HTML stand for?",
+    answers: [
+    { text: 'HyperText Markup Language', correct: true },
+    { text: 'HyperText Market Linkup', correct: false},
+    { text: 'Homepage Text Modem Language', correct: false},
+    { text: 'How The Market Looks', correct: false},
+    ]
+    },
+    {
+      question: "What colours make up the Jamaican flag?",
+      answers: [
+      { text: 'Yellow, Black & Green', correct: true },
+      { text: 'Red, Yellow & Green', correct: false},
+      { text: 'Black, Red & Yellow', correct: false},
+      { text: 'Black, Red & Green', correct: false},
+      ]
+      },
+      {
+        question: "What is Bruno Mars' real name?",
+        answers: [
+        { text: 'Peter Gene Hernandez', correct: true },
+        { text: 'Michael Perez', correct: false}
+        { text: 'Bruno Jupiter', correct: false}
+        { text: 'Bruno L. Marshall', correct: false}
+        ]
+        },
+  ];
+
 //target question section
 
 //target timer section
