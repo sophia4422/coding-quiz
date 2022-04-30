@@ -21,7 +21,7 @@ const renderQuestion = () => {
   section.setAttribute("class", "question-container");
 
   //create h2
-  const h2 = document.createElement("h2n");
+  const h2 = document.createElement("h2");
   section.setAttribute("class", "question");
   // questions need to be in an array
   h2.textContent = "What is the capital of Brazil?";
@@ -52,6 +52,7 @@ const renderQuestion = () => {
   section.append(h2, ul);
 
   //append question section to main element
+  mainElement.append(section);
 };
 
 //function to remove general know / start section on page
