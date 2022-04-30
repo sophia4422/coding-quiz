@@ -1,60 +1,25 @@
-//the penalty is -5 seconds
+// Page loads 'General Knowledge quiz'
 
-if () {}
-// if the counter is === a minus number then render game over page
+// I click 'Start Quiz'
+const startButton = document.getElementById("start-btn");
 
-
-//global declarations
-const questions = [];
-let timerValue = 10 * questions.length;
-
-const onLoad = () => {};
-// initialise local storage
-// check if highscores exists in LS
-// if false then set highscores to empty array in LS
-
-const removeStartSection = () => {};
-
-const startTimer = () => {};
-//declare function to execute every 1 sec
-//read 0 to stop game
-const countdown = () => {
-  //decrement timer value
-  //check if timer reachers 0
-  //if true render game over
-};
-//setInterval to 1000ms (1s)
-
-const validateAnswer = () => {
-  //get answer clicked from user
-  // get the correct answer for question
-  // compare the 2 answers
-  // if incorrect subtract 5 seconds from timerValue
-  // if incorrect render error alert with message and status
-  // Go to next question
-  // if correct render success alert with message and status
-  // go to next question
+const startQuiz = () => {
+  // The 'General Knowledge' Page disappears
+  // The first question, the timer and the answers appear
+  // The timer starts to count down
+  console.log("HEY");
 };
 
-const renderTimerSection = () => {};
-// use html as guide and build in JS
-//append section to main
+startButton.addEventListener("click", startQuiz);
 
-const renderQuestionSection = () => {};
-// use html as guide and build in JS
-//append section to main
-// add click event listener on question-section
+// I click an answer
+// If the answer is correct, the next question loads
+// If the answer is wrong, the next question loads and -10 seconds is deducted from the timer
 
-const renderGameOver = () => {};
-// use html as guide and build in JS
-//append section to main
+// Once I have finished all the questions
+// Or the timer runs out
+// Then the form page loads
+// I enter my name and my score is displayed
 
-const renderAlert = (message, statu) => {};
-//append to main div to #question-section
-
-const startQuiz = () => {};
-//remove start section
-
-//start timer
-
-//render time section
+//If I click home, the 'General Knowledge Quiz' page loads
+// If I click 'High Scores' my names / scores are pulled from LS and displayed (???)
