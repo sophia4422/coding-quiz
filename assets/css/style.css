@@ -21,6 +21,8 @@
 .section-container {
   padding: 100px;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   align-items: center;
   flex-direction: column;
   background-color: aqua;
@@ -63,6 +65,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   display: none; /* CHANGE LATER */
 }
 
@@ -85,11 +89,14 @@
 
 /* FORM AT THE END */
 .form-container {
-  padding: 50px;
+  padding: 100px;
   background-color: aquamarine;
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: none; /*EDIT LATER*/
 }
 
 .submit-container {
