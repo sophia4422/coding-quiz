@@ -12,16 +12,14 @@ const mainElement = document.getElementById("main");
 //current question index
 let questionIndex = 0;
 
+//answers for each question
+const brasilAnswers = ["Brasilia", "Rio de Janeiro", "Sao Paulo", "Ouro Petro"]
+
 //array of questions
 const questions = [
   {
   question: "What is the capital of Brazil?",
-  answers: [
-  { text: 'Brasilia', correct: true },
-  { text: 'Rio de Janeiro', correct: false},
-  { text: 'Sao Paulo', correct: false},
-  { text: 'Ouro Preto', correct: false},
-  ]
+  answers: brasilAnswers;
   },
   {
     question: "What does HTML stand for?",
@@ -59,6 +57,11 @@ const questions = [
 //function to render question on page
 const renderQuestion = () => {
   console.log("render question 1");
+
+  //get current question 
+  const currentQuestion = questions(questionIndex);
+
+
   //create section
   const section = document.createElement("section");
   section.setAttribute("class", "question-container");
@@ -67,7 +70,7 @@ const renderQuestion = () => {
   const h2 = document.createElement("h2");
   section.setAttribute("class", "question");
   // questions need to be in an array
-  h2.textContent = "What is the capital of Brazil?";
+  h2.textContent = currentQuestion.text;
 
   //create ul and append 4 li
   const ul = document.createElement("ul");
