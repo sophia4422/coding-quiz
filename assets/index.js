@@ -14,6 +14,7 @@ const renderQuestion = () => {
 //function to remove general know / start section on page
 const removeStartSection = () => {
   console.log("remove start section");
+  startSection.remove();
 };
 
 const startQuiz = () => {
