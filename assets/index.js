@@ -21,33 +21,6 @@ const questions = [
   question: "What is the capital of Brazil?",
   answers: brasilAnswers;
   },
-  {
-    question: "What does HTML stand for?",
-    answers: [
-    { text: 'HyperText Markup Language', correct: true },
-    { text: 'HyperText Market Linkup', correct: false},
-    { text: 'Homepage Text Modem Language', correct: false},
-    { text: 'How The Market Looks', correct: false},
-    ]
-    },
-    {
-      question: "What colours make up the Jamaican flag?",
-      answers: [
-      { text: 'Yellow, Black & Green', correct: true },
-      { text: 'Red, Yellow & Green', correct: false},
-      { text: 'Black, Red & Yellow', correct: false},
-      { text: 'Black, Red & Green', correct: false},
-      ]
-      },
-      {
-        question: "What is Bruno Mars' real name?",
-        answers: [
-        { text: 'Peter Gene Hernandez', correct: true },
-        { text: 'Michael Perez', correct: false}
-        { text: 'Bruno Jupiter', correct: false}
-        { text: 'Bruno L. Marshall', correct: false}
-        ]
-        },
   ];
 
 //target question section
@@ -78,19 +51,19 @@ const renderQuestion = () => {
 
   const li1 = document.createElement("li");
   li1.setAttribute("class", "answers");
-  li1.textContent = "Brasilia";
+  li1.textContent = currentQuestion.brasilAnswers[0];
 
   const li2 = document.createElement("li");
   li2.setAttribute("class", "answers");
-  li2.textContent = "Rio de Janeiro";
+  li2.textContent = currentQuestion.brasilAnswers[1];
 
   const li3 = document.createElement("li");
   li3.setAttribute("class", "answers");
-  li3.textContent = "Sao Paulo";
+  li3.textContent = currentQuestion.brasilAnswers[2];
 
   const li4 = document.createElement("li");
   li4.setAttribute("class", "answers");
-  li4.textContent = "Ouro Preto";
+  li4.textContent = currentQuestion.brasilAnswers[4];
 
   ul.append(li1, li2, li3, li4);
 
