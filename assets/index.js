@@ -27,7 +27,6 @@ const removeStartSection = () => {
 const renderQuestion = () => {
   console.log("render question");
   //dynamically build question section and add options
-  //append question section to the main (parent)
 
   //create section
   const section = document.createElement("section");
@@ -60,6 +59,15 @@ const renderQuestion = () => {
   const li4 = document.createElement("li");
   li4.setAttribute("class", "answers-item");
   li4.textContent = "Preto";
+
+  //append lis to parent
+  ul.append(li1, li2, li3, li4);
+
+  //append h2 and ul to section
+  section.append(h2, ul);
+
+  //append question section to the main (parent)
+  mainSelection.append(section);
 };
 
 startButton.addEventListener("click", startQuiz);
