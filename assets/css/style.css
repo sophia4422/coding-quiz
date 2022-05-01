@@ -80,7 +80,7 @@
   list-style-type: none;
 }
 
-.answers {
+.answers-item {
   padding: 10px;
   margin-bottom: 10px;
   border-style: groove;
@@ -88,7 +88,7 @@
   border-color: aqua;
 }
 
-.answers:hover {
+.answers-item:hover {
   background-color: aqua;
 }
 

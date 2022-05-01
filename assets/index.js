@@ -42,6 +42,11 @@ const renderQuestion = () => {
   //creat ul and append 4 lis
   const ul = document.createElement("ul");
   ul.setAttribute("class", "answer-container");
+
+  //call a function to get list items
+  //loop over options to create and append li to ul
+  const li1 = document.createElement("li");
+  li1.setAttribute("class", "answers-item");
 };
 
 startButton.addEventListener("click", startQuiz);
