@@ -28,6 +28,20 @@ const renderQuestion = () => {
   console.log("render question");
   //dynamically build question section and add options
   //append question section to the main (parent)
+
+  //create section
+  const section = document.createElement("section");
+  section.setAttribute("class", "question-container");
+
+  //create h2
+  const h2 = document.createElement("h2");
+  h2.setAttribute("class", "question-title");
+  //this question is going to change to be dynamic
+  h2.textContent = "What is the capital of Brazil?";
+
+  //creat ul and append 4 lis
+  const ul = document.createElement("ul");
+  ul.setAttribute("class", "answer-container");
 };
 
 startButton.addEventListener("click", startQuiz);
