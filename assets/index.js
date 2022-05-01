@@ -67,7 +67,7 @@ const renderQuestion = () => {
   section.append(h2, ul);
 
   //append question section to the main (parent)
-  mainSelection.append(section);
+  mainSection.append(section);
 };
 
 startButton.addEventListener("click", startQuiz);
