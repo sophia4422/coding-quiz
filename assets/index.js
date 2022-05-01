@@ -21,4 +21,9 @@ const removeStartSection = () => {
   startSection.remove();
 };
 
+const renderQuestion = () => {
+  console.log("render question");
+  //dynamically build question section and add options
+};
+
 startButton.addEventListener("click", startQuiz);

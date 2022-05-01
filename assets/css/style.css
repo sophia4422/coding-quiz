@@ -85,7 +85,11 @@
   margin-bottom: 10px;
   border-style: groove;
   border-radius: 8px;
-  border-color: blue;
+  border-color: aqua;
+}
+
+.answers:hover {
+  background-color: aqua;
 }
 
 /* FORM AT THE END */
