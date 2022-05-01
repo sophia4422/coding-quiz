@@ -70,8 +70,19 @@ const removeStartSection = () => {
   startSection.remove();
 };
 
-const handleOptionClick = () => {
+//event handler function to handle click events in question section
+const handleOptionClick = (event) => {
   console.log("clicked inside question section");
+
+  //get current target
+  const currentTarget = event.currentTarget;
+  //get target
+  const target = event.target;
+
+  //see if click is only in LI
+  //check if target element is li element
+  if (target.tagName === "LI") {
+  }
 };
 
 const renderQuestion = () => {
