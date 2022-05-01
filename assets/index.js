@@ -4,6 +4,9 @@ const startButton = document.getElementById("start-btn");
 //target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
+//target main section
+const mainSection = document.getElementById("main");
+
 const startQuiz = () => {
   console.log("start button clicked");
   // The 'General Knowledge' / start section Page disappears
@@ -24,6 +27,7 @@ const removeStartSection = () => {
 const renderQuestion = () => {
   console.log("render question");
   //dynamically build question section and add options
+  //append question section to the main (parent)
 };
 
 startButton.addEventListener("click", startQuiz);
