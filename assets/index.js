@@ -94,8 +94,35 @@ const handleOptionClick = (event) => {
       question: question,
       value: value,
     };
-    console.log(answer);
+
+    //go to next question if not the last question
+    // if last question render results
+    if (questionIndex < allQuestions.length - 1) {
+      // go to next question
+      //increment question index by one
+      questionIndex += 1;
+
+      renderQuestion();
+    } else {
+      // if last question render results and form
+      // remove last question
+      renderResults();
+
+      renderForm();
+    }
   }
+};
+
+//STORE ANSWER IN LOCAL STORAGE
+
+//function to render results
+const renderResults = () => {
+  console.log("results");
+};
+
+//function to render form
+const renderForm = () => {
+  console.log("render form");
 };
 
 const renderQuestion = () => {
