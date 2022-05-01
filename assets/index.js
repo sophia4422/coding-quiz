@@ -70,6 +70,10 @@ const removeStartSection = () => {
   startSection.remove();
 };
 
+const handleOptionClick = () => {
+  console.log("clicked inside question section");
+};
+
 const renderQuestion = () => {
   console.log("render question");
   //dynamically build question section and add options
@@ -117,6 +121,9 @@ const renderQuestion = () => {
 
   //append question section to the main (parent)
   mainSection.append(section);
+
+  //add event listener on question section
+  section.addEventListener("click", handleOptionClick);
 };
 
 startButton.addEventListener("click", startQuiz);
