@@ -13,9 +13,9 @@ const startQuiz = () => {
   removeStartSection();
   // Render first question
   renderQuestion();
-  //the timer and the answers
 
-  // The timer starts to count down
+  //NEED TO RENDER TIMER and comment it out in html
+  renderTimer();
 };
 
 //function to remove general know / start section on page
@@ -68,6 +68,35 @@ const renderQuestion = () => {
 
   //append question section to the main (parent)
   mainSection.append(section);
+};
+
+const renderTimer = () => {
+  console.log("render timer");
+
+  //create timer section
+  const timerSection = document.createElement("timerSection"); //section bit might not work
+  timerSection.setAttribute("class", "timer-section");
+
+  //create div class
+  const div = document.createElement("div");
+  div.setAttribute("class", "timer");
+  //this question is going to change to be dynamic
+  div.textContent = "Time Remaining:";
+
+  //create span class
+  const span = document.createElement("span");
+  span.setAttribute("class", "timer-span");
+  //this question is going to change to be dynamic
+  span.textContent = "60:";
+
+  //append span to div
+  div.append(span);
+
+  //append div to section
+  section.append(div);
+
+  //append section to main
+  mainSection.append(timerSection);
 };
 
 startButton.addEventListener("click", startQuiz);
