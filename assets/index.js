@@ -47,6 +47,19 @@ const renderQuestion = () => {
   //loop over options to create and append li to ul
   const li1 = document.createElement("li");
   li1.setAttribute("class", "answers-item");
+  li1.textContent = "Brasilia";
+
+  const li2 = document.createElement("li");
+  li2.setAttribute("class", "answers-item");
+  li2.textContent = "Rio";
+
+  const li3 = document.createElement("li");
+  li3.setAttribute("class", "answers-item");
+  li3.textContent = "Paulo";
+
+  const li4 = document.createElement("li");
+  li4.setAttribute("class", "answers-item");
+  li4.textContent = "Preto";
 };
 
 startButton.addEventListener("click", startQuiz);
