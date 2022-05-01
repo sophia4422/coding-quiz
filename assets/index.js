@@ -82,6 +82,9 @@ const handleOptionClick = (event) => {
   //see if click is only in LI
   //check if target element is li element
   if (target.tagName === "LI") {
+    //get the option the user clicked on
+    // get the question the user answered
+    // build an answer object that contains question and answer
   }
 };
 
@@ -110,18 +113,22 @@ const renderQuestion = () => {
   //loop over options to create and append li to ul
   const li1 = document.createElement("li");
   li1.setAttribute("class", "answers-item");
+  li1.setAttribute("data-value", currentQuestion.allAnswers1[0]);
   li1.textContent = currentQuestion.allAnswers1[0];
 
   const li2 = document.createElement("li");
   li2.setAttribute("class", "answers-item");
+  li2.setAttribute("data-value", currentQuestion.allAnswers1[1]);
   li2.textContent = currentQuestion.allAnswers1[1];
 
   const li3 = document.createElement("li");
   li3.setAttribute("class", "answers-item");
+  li3.setAttribute("data-value", currentQuestion.allAnswers1[2]);
   li3.textContent = currentQuestion.allAnswers1[2];
 
   const li4 = document.createElement("li");
   li4.setAttribute("class", "answers-item");
+  li4.setAttribute("data-value", currentQuestion.allAnswers1[3]);
   li4.textContent = currentQuestion.allAnswers1[3];
 
   //append lis to parent
