@@ -83,8 +83,18 @@ const handleOptionClick = (event) => {
   //check if target element is li element
   if (target.tagName === "LI") {
     //get the option the user clicked on
+    const value = target.getAttribute("data-value");
+    console.log(value); //I will use this for the score
     // get the question the user answered
+    const question = allQuestions[questionIndex].text;
+    console.log(question);
     // build an answer object that contains question and answer
+    // i can now put this object in an array
+    const answer = {
+      question: question,
+      value: value,
+    };
+    console.log(answer);
   }
 };
 
