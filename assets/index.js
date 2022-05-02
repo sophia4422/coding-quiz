@@ -201,7 +201,10 @@ const startButton = document.getElementById("start-btn");
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
-// 5. function to remove banner
+//8. target main element
+const mainElement = document.getElementById("main");
+
+//5. function to remove banner
 const removeBanner = () => {
   console.log("remove banner");
 
@@ -211,6 +214,18 @@ const removeBanner = () => {
 //6. function to render question to page
 const renderQuestion = () => {
   console.log("render question");
+  //9. create section
+  const section = document.createElement("section");
+  section.setAttribute("class", "question-container");
+  //10. create h2
+  const h2 = document.createElement("h2");
+  //11. create ul and append 4 lis
+  const ul = document.createElement("ul");
+};
+
+//7. function to start timer
+const startTimer = () => {
+  console.log("timer started");
 };
 
 //3. declare the event handler function for the start button click
@@ -221,7 +236,8 @@ const startQuiz = () => {
   removeBanner();
   //6. render first question
   renderQuestion();
-  //start timer
+  //7.start timer
+  startTimer();
 };
 
 //2. event listener for the start button
