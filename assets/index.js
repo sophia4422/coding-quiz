@@ -216,11 +216,16 @@ const renderQuestion = () => {
   console.log("render question");
   //9. create section
   const section = document.createElement("section");
+  //12. set class attribute for section
   section.setAttribute("class", "question-container");
   //10. create h2
   const h2 = document.createElement("h2");
+  //13. set class attribute for h2
+  h2.setAttribute("class", "question-title");
   //11. create ul and append 4 lis
   const ul = document.createElement("ul");
+  //14. set class attribute for ul
+  ul.setAttribute("class", "answer-container");
 };
 
 //7. function to start timer
