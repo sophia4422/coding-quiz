@@ -208,7 +208,7 @@ const mainElement = document.getElementById("main");
 let questionIndex = 0;
 
 //27. all answers array
-const options = ["test1", "test2", "test3", "test4"];
+const options = ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"];
 
 //28. all questions array
 const questions = [
