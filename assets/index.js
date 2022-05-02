@@ -208,7 +208,7 @@ const mainElement = document.getElementById("main");
 let questionIndex = 0;
 
 //27. all answers array
-const options = ["test1", "test2", "test3"];
+const options = ["test1", "test2", "test3", "test4"];
 
 //28. all questions array
 const questions = [
@@ -240,6 +240,10 @@ const removeBanner = () => {
 //6. function to render question to page
 const renderQuestion = () => {
   console.log("render question");
+
+  //29. get current question
+  const currentQuestion = questions[questionIndex];
+
   //9. create section
   const section = document.createElement("section");
   //12. set class attribute for section
@@ -249,7 +253,7 @@ const renderQuestion = () => {
   //13. set class attribute for h2
   h2.setAttribute("class", "question-title");
   //15. set h2 text content
-  h2.textContent = "What is the capital of Brazil?";
+  h2.textContent = currentQuestion.text;
   //11. create ul and append 4 lis
   const ul = document.createElement("ul");
   //14. set class attribute for ul
@@ -262,22 +266,22 @@ const renderQuestion = () => {
   //18. set class attribute for li1
   li1.setAttribute("class", "answers-item");
   //19. set h2 text content
-  li1.textContent = "Brasilia";
+  li1.textContent = currentQuestion.options[0];
 
   //20. li2:
   const li2 = document.createElement("li2");
   li2.setAttribute("class", "answers-item");
-  li2.textContent = "Rio de Janeiro";
+  li2.textContent = currentQuestion.options[1];
 
   //21. li3:
   const li3 = document.createElement("li3");
   li3.setAttribute("class", "answers-item");
-  li3.textContent = "Sao Paulo";
+  li3.textContent = currentQuestion.options[2];
 
   //22. li4:
   const li4 = document.createElement("li4");
   li4.setAttribute("class", "answers-item");
-  li4.textContent = "Ouro Preto";
+  li4.textContent = currentQuestion.options[3];
 
   //23. append all lis to parent (ul)
   ul.append(li1, li2, li3, li4);
