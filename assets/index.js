@@ -192,3 +192,17 @@
 // };
 
 // startButton.addEventListener("click", startQuiz);
+
+//________________________
+
+//1. target the start button
+const startButton = document.getElementById("start-btn");
+
+// . target the general knowledge / start section to remove it
+const startSection = document.getElementById("start-quiz-banner");
+
+//declare the event handler function for the start button click
+const handleStartButtonClick = () => {};
+
+//2. event listener for the start button
+startButton.addEventListener("click", startQuiz);
