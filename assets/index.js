@@ -222,10 +222,36 @@ const renderQuestion = () => {
   const h2 = document.createElement("h2");
   //13. set class attribute for h2
   h2.setAttribute("class", "question-title");
+  //15. set h2 text content
+  h2.textContent = "What is the capital of Brazil?";
   //11. create ul and append 4 lis
   const ul = document.createElement("ul");
   //14. set class attribute for ul
   ul.setAttribute("class", "answer-container");
+
+  //16. loop over options to create and append li to ul
+
+  //17.create four list items, li1:
+  const li1 = document.createElement("li1");
+  //18. set class attribute for li1
+  li1.setAttribute("class", "answers-item");
+  //19. set h2 text content
+  li1.textContent = "Brasilia";
+
+  //20. li2:
+  const li2 = document.createElement("li2");
+  li2.setAttribute("class", "answers-item");
+  li2.textContent = "Rio de Janeiro";
+
+  //21. li3:
+  const li3 = document.createElement("li3");
+  li3.setAttribute("class", "answers-item");
+  li3.textContent = "Sao Paulo";
+
+  //22. li4:
+  const li4 = document.createElement("li4");
+  li4.setAttribute("class", "answers-item");
+  li4.textContent = "Ouro Preto";
 };
 
 //7. function to start timer
