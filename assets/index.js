@@ -198,12 +198,28 @@
 //1. target the start button
 const startButton = document.getElementById("start-btn");
 
-// . target the general knowledge / start section to remove it
+//4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
+
+// 5. function to remove banner
+const removeBanner = () => {
+  console.log("remove banner");
+};
+
+//6. function to render question to page
+const renderQuestion = () => {
+  console.log("render question");
+};
 
 //3. declare the event handler function for the start button click
 const startQuiz = () => {
   console.log("button clicked");
+
+  //5. remove question banner
+  removeBanner();
+  //6. render first question
+  renderQuestion();
+  //start timer
 };
 
 //2. event listener for the start button
