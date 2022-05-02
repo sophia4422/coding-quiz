@@ -78,6 +78,9 @@
 .answer-container {
   padding: 10px;
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .answers-item {
