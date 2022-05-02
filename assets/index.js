@@ -265,22 +265,25 @@ const renderQuestion = () => {
   const li1 = document.createElement("li1");
   //18. set class attribute for li1
   li1.setAttribute("class", "answers-item");
-  //19. set h2 text content
+  //19/30. set h2 text content
   li1.textContent = currentQuestion.options[0];
 
   //20. li2:
   const li2 = document.createElement("li2");
   li2.setAttribute("class", "answers-item");
+  //31. answers taken from array
   li2.textContent = currentQuestion.options[1];
 
   //21. li3:
   const li3 = document.createElement("li3");
   li3.setAttribute("class", "answers-item");
+  //32.
   li3.textContent = currentQuestion.options[2];
 
   //22. li4:
   const li4 = document.createElement("li4");
   li4.setAttribute("class", "answers-item");
+  //33.
   li4.textContent = currentQuestion.options[3];
 
   //23. append all lis to parent (ul)
