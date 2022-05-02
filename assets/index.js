@@ -204,6 +204,8 @@ const startSection = document.getElementById("start-quiz-banner");
 // 5. function to remove banner
 const removeBanner = () => {
   console.log("remove banner");
+
+  startSection.remove();
 };
 
 //6. function to render question to page
