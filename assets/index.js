@@ -204,6 +204,32 @@ const startSection = document.getElementById("start-quiz-banner");
 //8. target main element
 const mainElement = document.getElementById("main");
 
+//26. current question index
+let questionIndex = 0;
+
+//27. all answers array
+const options = ["test1", "test2", "test3"];
+
+//28. all questions array
+const questions = [
+  {
+    text: "What is the capital of Brazil?",
+    options,
+  },
+  {
+    text: "What does HTML stand for?",
+    options,
+  },
+  {
+    text: "What colours make up the Jamaican flag?",
+    options,
+  },
+  {
+    text: "What is Bruno Mars' real name?",
+    options,
+  },
+];
+
 //5. function to remove banner
 const removeBanner = () => {
   console.log("remove banner");
