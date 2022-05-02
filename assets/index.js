@@ -252,6 +252,15 @@ const renderQuestion = () => {
   const li4 = document.createElement("li4");
   li4.setAttribute("class", "answers-item");
   li4.textContent = "Ouro Preto";
+
+  //23. append all lis to parent (ul)
+  ul.append(li1, li2, li3, li4);
+
+  //24. append h2 and ul to section
+  section.append(h2, ul);
+
+  //25. append question section to main parent
+  mainElement.append(section);
 };
 
 //7. function to start timer
