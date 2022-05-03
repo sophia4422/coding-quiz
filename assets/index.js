@@ -3,11 +3,17 @@
 //1. target the start button
 const startButton = document.getElementById("start-btn");
 
+//7.4 target timer span
+const timerSpan = document.getElementById("timer-span");
+
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
 //8. target main element
 const mainElement = document.getElementById("main");
+
+//7.3 timer
+let timer = 0;
 
 //26. current question index
 let questionIndex = 0;
@@ -134,14 +140,20 @@ const renderQuestion = () => {
 const startTimer = () => {
   console.log("timer started");
 
-  //start timer
-  //WEB API - something in js will talk to something on the browser and start a timer
+  //7.2 function for updateTimerValue
+  const updateTimerValue = () => {
+    console.log("update timer value");
 
-  //repeat code for fixed interval
-  setInterval;
+    //increment timer by 1
+    timer += 1;
 
-  //waits or delays
-  setTimeout;
+    //set text to new timer value
+    timerSpan.textContent = timer;
+  };
+
+  //7.1 repeat code for fixed interval
+  const timerId = setInterval(updateTimerValue, 1000);
+  console.log(timerId);
 };
 
 //3. declare the event handler function for the start button click
