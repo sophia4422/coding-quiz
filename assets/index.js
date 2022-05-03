@@ -241,7 +241,13 @@ const handleOptionClick = (event) => {
 
   //39. check that click only comes from the li
   if (target.tagName === "LI1") {
-    console.log("clicked li");
+    console.log("clicked li1");
+  } else if (target.tagName === "LI2") {
+    console.log("clicked li2");
+  } else if (target.tagName === "LI3") {
+    console.log("clicked li3");
+  } else if (target.tagName === "LI4") {
+    console.log("clicked li4");
   }
 
   //40. check if target element is li
