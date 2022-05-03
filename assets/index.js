@@ -230,6 +230,11 @@ const questions = [
   },
 ];
 
+//36. handleOptionClick function to go to next question
+const handleOptionClick = () => {
+  console.log("clicked inside question section");
+};
+
 //5. function to remove banner
 const removeBanner = () => {
   console.log("remove banner");
@@ -294,6 +299,9 @@ const renderQuestion = () => {
 
   //25. append question section to main parent
   mainElement.append(section);
+
+  //34. add event listener on question section
+  section.addEventListener("click", handleOptionClick);
 };
 
 //7. function to start timer
