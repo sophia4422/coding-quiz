@@ -56,13 +56,13 @@ const handleOptionClick = (event) => {
     console.log(question);
   } else if (target.tagName === "LI2") {
     const question = questions[questionIndex].text;
-    console.log(question);
+    timer -= 10;
   } else if (target.tagName === "LI3") {
     const question = questions[questionIndex].text;
-    console.log(question);
+    timer -= 10;
   } else if (target.tagName === "LI4") {
     const question = questions[questionIndex].text;
-    console.log(question);
+    timer -= 10;
   }
 };
 
@@ -144,8 +144,17 @@ const startTimer = () => {
   const updateTimerValue = () => {
     console.log("update timer value");
 
-    //increment timer by 1
+    //decrement timer by 1
     timer -= 1;
+
+    timerSpan.textContent = timer;
+
+    //check if timer is equal to 0
+    if (timer === 0) {
+      clearInterval(timerId);
+      console.log("game over");
+      //render form
+    }
 
     //set text to new timer value
     timerSpan.textContent = timer;

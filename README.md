@@ -65,6 +65,8 @@ but that did not work.
 So I have had to target each li1, li2 etc in the if statement. The clicks are read, but I don't know where to go from here.
 #########
 
+when the wrong answer is clicked, I want to decrement my timer by -= 10 seconds.
+
 const questions = [
 {
 question: "What is the capital of Brazil?",
