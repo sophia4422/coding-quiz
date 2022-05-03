@@ -174,9 +174,18 @@ const renderTimer = () => {
 
   const timerSpan = document.createElement("span");
   //set class attribute for span
-  timerSpan.setAttribute("class", "");
-  //15. set h2 text content
-  h2.textContent = currentQuestion.text;
+  timerSpan.setAttribute("id", "timer-span");
+  //set timer span text content
+  timerSpan.textContent = timer;
+
+  //append span to div
+  timeRemaining.append(timerSpan);
+
+  //append div to section
+  timerSection.append(timeRemaining);
+
+  //append section to main
+  mainElement.append(timerSection);
 };
 
 //7. function to start timer
