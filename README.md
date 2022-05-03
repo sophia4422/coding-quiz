@@ -1,34 +1,57 @@
 # coding-quiz
 
-Beat the timer to answer all the questions
+This challenge was to create an interactive, timed quiz using HTML, CSS and JavaScript.
 
-NAV BAR:
-Home - take you to the home - where it says start quiz
-High Scores - All scores are loaded from LS with name
-~Go back: takes you to home page | Clear: clears high scores in LS
-~When you load page with no high scores, a render message says 'No Scores' appear
+Click here to see the deployed page:
 
-What do I want to do?
+# Quiz Features
 
--Page loads
--Start Button
--Click Start Button:
-~Timer starts to count down
-~First question appears with 4 answer choices
+- Navigation Bar
+  The nav bar will remain at the top of the page consistently
+  The nav bar will feature two buttons:
+- Home - this will always return the user to the homepage.
+- High Scores - all scores inputted with a form will be loaded from local storage with the username and displayed highest to lowest.
+  The High Scores page will also feature a Go Back buton that takes you to home page, and a Clear button that clears high scores in local storage.
+  ~When you load page with no high scores, a render message says 'No Scores' will appear
 
--Click an answer choice
-~If right: next question
-~If wrong: time is deducted, go to next question
+# User Journey
+
+1. The page loads to show the nav bar, the quiz title, a description and a start button
+2. When the Start Button is clicked
+3. The Timer starts to count down from 40 seconds
+4. Simultaneously, the first question appears with 4 answer choices
+
+5. Click an answer choice
+6. If the selected answer is correct: the next question displays
+7. If the selected answer is wrong: 10 seconds from the timer is deducted, simultaneously the next question loads
 
 Meanwhile:
-Timer is going down
-Your score is being tracked
-The current question you are on is being tracked
 
-# Questions ~ random knowledge
+- Timer is going down
+- Your score is being tracked
+- The current question you are on is being tracked
+
+GAME OVER:
+
+- When all questions are answered
+- When remaining time reaches 0
+- Then the form is rendered
+
+FORM:
+
+- Please enter full name:
+- Your Score is \*\*\*
+- Click Submit
+- Score is stored in local storage
+
+# Quiz Theme
+
+> When the homework was first presented, I wanted to make the quiz about music. I had an idea of doing a black/green Spotify inspired design. The questions would involve, finish the lyric, guess the album cover, name that song etc. However, for the purposes of time constraints I thought it would be in my best interest to neglect the css and focus more on the functionality of Javascript, as this is my weak point. What good is a pretty quiz if it does not work? ........
+
+I did not want my quiz to focus solely on code related questions, since this was not mandatory to the brief and also has been done multiple times. I decided instead to do a random, general knowledge quiz, with coding included. I started with four basic questions:
 
 Question 1: What is the capital of Brazil?
-Answers: Brasilia, Rio de Janeiro, Sao Paulo, Ouro Preto
+Answers: Brasilia, Rio de Janeiro, São Paulo, Ouro Preto
 
 Question 2: What does HTML stand for?
 Answers: HyperText Market Linkup, HyperText Markup Language, Homepage Text Modem Language, How The Market Looks
@@ -40,17 +63,6 @@ Question 4: What is Bruno Mars' real name?
 Answers: Bruno L. Marshall, Bruno Jupiter, Michael Perez, Peter Gene Hernandez
 
 ###
-
-GAME OVER:
--When all questions are answered
--When remaining time reaches 0
-~Stop timer, render form
-
-FORM:
--Please enter full name:
--Your Score is \*\*
-Submit
-/Store score in LS
 
 ######
 
