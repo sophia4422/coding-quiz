@@ -8,11 +8,12 @@ Click here to see the deployed page:
 
 - Navigation Bar
   The nav bar will remain at the top of the page consistently
-  The nav bar will feature two buttons:
+  <br> The nav bar will feature two buttons:
 - Home - this will always return the user to the homepage.
 - High Scores - all scores inputted with a form will be loaded from local storage with the username and displayed highest to lowest.
-  The High Scores page will also feature a Go Back buton that takes you to home page, and a Clear button that clears high scores in local storage.
-  ~When you load page with no high scores, a render message says 'No Scores' will appear
+
+The High Scores page will also feature a Go Back buton that takes you to home page, and a Clear button that clears high scores in local storage.
+~When you load page with no high scores, a render message says 'No Scores' will appear
 
 # User Journey
 
