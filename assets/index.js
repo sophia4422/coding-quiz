@@ -18,34 +18,50 @@ const formSection = document.getElementById("form-section");
 //42. target the question section to remove it
 const questionSection = document.getElementById("question-section");
 
-//7.3 timer
-let timer = 40;
-
 //26. current question index
 let questionIndex = 0;
-
-//27. all answers array
-const options = ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"];
 
 //28. all questions array
 const questions = [
   {
     text: "What is the capital of Brazil?",
-    options,
+    options: ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"],
+    correctAnswer: "Brasilia",
   },
   {
     text: "What does HTML stand for?",
-    options,
+    options: [
+      "HyperText Market Linkup",
+      "HyperText Markup Language",
+      "Homepage Text Modem Language",
+      "How The Market Looks",
+    ],
+    correctAnswer: "HyperText Markup Language",
   },
   {
     text: "What colours make up the Jamaican flag?",
-    options,
+    options: [
+      "Yellow, Black & Green",
+      "Red, Yellow & Green",
+      "Black, Red & Yellow",
+      "Black, Red & Green",
+    ],
+    correctAnswer: "Yellow, Black & Green",
   },
   {
     text: "What is Bruno Mars' real name?",
-    options,
+    options: [
+      "Bruno L. Marshall",
+      "Bruno Jupiter",
+      "Michael Perez",
+      "Peter Gene Hernandez",
+    ],
+    correctAnswer: "Peter Gene Hernandez",
   },
 ];
+
+//7.3 timer
+let timer = 10 * questions.length;
 
 //36. handleOptionClick function to handle click events in question section
 const handleOptionClick = (event) => {
