@@ -13,7 +13,7 @@ const startSection = document.getElementById("start-quiz-banner");
 const mainElement = document.getElementById("main");
 
 //40. target form section
-const formSection = document.getElementById("form-section");
+//const formSection = document.getElementById("form-section");
 
 //42. target the question section to remove it
 const questionSection = document.getElementById("question-section");
@@ -181,6 +181,7 @@ const startTimer = () => {
     //check if timer is equal to 0
     if (timer === 0) {
       clearInterval(timerId);
+      document.getElementById("question-section").remove();
       console.log("game over");
       //41. render form
       renderForm();
@@ -210,6 +211,15 @@ const startQuiz = () => {
 //41. function to render form
 const renderForm = () => {
   console.log("render form");
+  //remove the timer
+  document.getElementById("section-timer").remove(); //KEEP GETTING CONSOLE ERROR
+
+  const formSection = document.createElement("section");
+  formSection.setAttribute("class", "form-container");
+  formSection.setAttribute("id", "form-section");
+
+  //append section to main section
+  mainElement.append(formSection);
 };
 
 //2. event listener for the start button

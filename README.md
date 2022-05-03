@@ -103,3 +103,7 @@ The page loads to show a nav bar with a home button and a high scores button. A 
 When the Start Quiz button is clicked, the first question loads and the timer begins. The timer starts at 40 seconds (10 seconds per question) and counts down. When incorrect answers are selected, my timer decreases by 10 seconds. If the correct answer is selected, the timer stays the same.
 
 When the timer reaches 0, the form should render. If you see in the console, my renderForm function does show 'render form' as text in the console. I tried to target my question-section and use the .remove() in attempt to make the question section disappear. I also tried to append my form-section to the main element. However, I kept getting errors in my console when I did this, which would cause the whole application to stop working.
+
+> Uncaught TypeError: Cannot read properties of null (reading 'remove')
+
+    at updateTimerValue (index.js:184:50)
