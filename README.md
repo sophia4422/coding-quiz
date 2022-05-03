@@ -2,7 +2,7 @@
 
 This challenge was to create an interactive, timed quiz using HTML, CSS and JavaScript.
 
-Click here to see the deployed page:
+Click here to see the deployed page: https://sophia4422.github.io/coding-quiz/
 
 # User Journey
 
