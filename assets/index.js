@@ -72,13 +72,6 @@ const handleOptionClick = (event) => {
   }
 };
 
-//5. function to remove banner
-const removeQuestion = () => {
-  console.log("remove question section");
-
-  questionSection.remove();
-};
-
 //6. function to render question to page
 const renderQuestion = () => {
   console.log("render question");
@@ -194,8 +187,6 @@ const startQuiz = () => {
 //41. function to render form
 const renderForm = () => {
   console.log("render form");
-
-  removeQuestion();
 };
 
 //2. event listener for the start button
