@@ -9,11 +9,14 @@ const timerSpan = document.getElementById("timer-span");
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
+//8. target main element
+const mainElement = document.getElementById("main");
+
 //40. target form section
 const formSection = document.getElementById("form-section");
 
-//8. target main element
-const mainElement = document.getElementById("main");
+//42. target the question section to remove it
+const questionSection = document.getElementById("question-section");
 
 //7.3 timer
 let timer = 40;
@@ -70,10 +73,10 @@ const handleOptionClick = (event) => {
 };
 
 //5. function to remove banner
-const removeBanner = () => {
-  console.log("remove banner");
+const removeQuestion = () => {
+  console.log("remove question section");
 
-  startSection.remove();
+  questionSection.remove();
 };
 
 //6. function to render question to page
@@ -138,6 +141,13 @@ const renderQuestion = () => {
   section.addEventListener("click", handleOptionClick);
 };
 
+//42. function to remove question section
+const removeBanner = () => {
+  console.log("remove banner");
+
+  startSection.remove();
+};
+
 //7. function to start timer
 //this is a callback function
 const startTimer = () => {
@@ -184,6 +194,8 @@ const startQuiz = () => {
 //41. function to render form
 const renderForm = () => {
   console.log("render form");
+
+  removeQuestion();
 };
 
 //2. event listener for the start button
