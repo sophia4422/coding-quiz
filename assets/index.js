@@ -164,6 +164,21 @@ const removeBanner = () => {
   startSection.remove();
 };
 
+//7. Render timer
+const renderTimer = () => {
+  const timerSection = document.createElement("section");
+  timerSection.setAttribute("id", "section-timer");
+
+  const timeRemaining = document.createElement("div");
+  timeRemaining.textContent = "Time Remaining: ";
+
+  const timerSpan = document.createElement("span");
+  //set class attribute for span
+  timerSpan.setAttribute("class", "");
+  //15. set h2 text content
+  h2.textContent = currentQuestion.text;
+};
+
 //7. function to start timer
 //this is a callback function
 const startTimer = () => {
@@ -204,7 +219,9 @@ const startQuiz = () => {
   removeBanner();
   //6. render first question
   renderQuestion();
-  //7.start timer
+  //7. render timer
+  renderTimer();
+  //8.start timer
   startTimer();
 };
 
