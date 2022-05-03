@@ -53,7 +53,7 @@ I did not want my quiz to focus solely on code related questions, since this was
 Question 1: What is the capital of Brazil?
 Answers: Brasilia, Rio de Janeiro, São Paulo, Ouro Preto
 
-<details open>
+<details closed>
 <summary>Answer to Question 1</summary>
 <br>
 Brasilia
@@ -62,7 +62,7 @@ Brasilia
 Question 2: What does HTML stand for?
 Answers: HyperText Market Linkup, HyperText Markup Language, Homepage Text Modem Language, How The Market Looks
 
-<details open>
+<details closed>
 <summary>Answer to Question 2</summary>
 <br>
 HyperText Markup Language
@@ -71,7 +71,7 @@ HyperText Markup Language
 Question 3: What colours make up the Jamaican flag?
 Answers: Yellow, Black & Green / Red, Yellow & Green / Black, Red & Yellow / Black, Red & Green
 
-<details open>
+<details closed>
 <summary>Answer to Question 3</summary>
 <br>
 Yellow, Black & Green
@@ -80,7 +80,7 @@ Yellow, Black & Green
 Question 4: What is Bruno Mars' real name?
 Answers: Bruno L. Marshall, Bruno Jupiter, Michael Perez, Peter Gene Hernandez
 
-<details open>
+<details closed>
 <summary>Answer to Question 4</summary>
 <br>
 Peter Gene Hernandez
