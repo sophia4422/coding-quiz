@@ -4,17 +4,6 @@ This challenge was to create an interactive, timed quiz using HTML, CSS and Java
 
 Click here to see the deployed page:
 
-# Quiz Features
-
-- Navigation Bar
-  The nav bar will remain at the top of the page consistently
-  <br> The nav bar will feature two buttons:
-- Home - this will always return the user to the homepage.
-- High Scores - all scores inputted with a form will be loaded from local storage with the username and displayed highest to lowest.
-
-The High Scores page will also feature a Go Back buton that takes you to home page, and a Clear button that clears high scores in local storage.
-~When you load page with no high scores, a render message says 'No Scores' will appear
-
 # User Journey
 
 1. The page loads to show the nav bar, the quiz title, a description and a start button
@@ -87,58 +76,30 @@ Yellow, Black & Green
 Peter Gene Hernandez
 </details>
 
-###
+# Quiz Features
 
-######
+- Navigation Bar
+  The nav bar will remain at the top of the page consistently
+  <br> The nav bar will feature two buttons:
+- Home - this will always return the user to the homepage.
+- High Scores - all scores inputted with a form will be loaded from local storage with the username and displayed highest to lowest.
 
-At number 39. things started to go wrong. I just wanted to target the Li so I did
-if (target.tagName === "LI")
-console.log("Clicked Li);
-but the console would not read it. Nothing happened when clicked. So I targeted each Li,
-LI1, LI2 etc and that way it worked.
-I tried to do
-if (target.tagName === "LI1" && target.tagName === "LI2") etc to get the same effect for each Li,
-but that did not work.
-So I have had to target each li1, li2 etc in the if statement. The clicks are read, but I don't know where to go from here.
-#########
+- A timer: 40 seconds total, 10 seconds per question
+- 4 multiple choice questions
+- Form to add your name and save your highscore once the quiz has finished
 
-when the wrong answer is clicked, I want to decrement my timer by -= 10 seconds.
+The High Scores page will also feature a Go Back button that takes you to home page. There will also be a Clear button that clears high scores in local storage. When you load page with no high scores, a render message says 'No Scores' will appear.
 
-const questions = [
-{
-question: "What is the capital of Brazil?",
-answers: [
-{ text: 'Brasilia', correct: true },
-{ text: 'Rio de Janeiro', correct: false},
-{ text: 'Sao Paulo', correct: false},
-{ text: 'Ouro Preto', correct: false},
-]
-},
-{
-question: "What does HTML stand for?",
-answers: [
-{ text: 'HyperText Markup Language', correct: true },
-{ text: 'HyperText Market Linkup', correct: false},
-{ text: 'Homepage Text Modem Language', correct: false},
-{ text: 'How The Market Looks', correct: false},
-]
-},
-{
-question: "What colours make up the Jamaican flag?",
-answers: [
-{ text: 'Yellow, Black & Green', correct: true },
-{ text: 'Red, Yellow & Green', correct: false},
-{ text: 'Black, Red & Yellow', correct: false},
-{ text: 'Black, Red & Green', correct: false},
-]
-},
-{
-question: "What is Bruno Mars' real name?",
-answers: [
-{ text: 'Peter Gene Hernandez', correct: true },
-{ text: 'Michael Perez', correct: false}
-{ text: 'Bruno Jupiter', correct: false}
-{ text: 'Bruno L. Marshall', correct: false}
-]
-},
-];
+The quiz should be responsive to all view ports.
+
+# Meeting the Brief
+
+Unfortunately, the appearance of the quiz is not how I would have liked it to look. I did not put much time into the css in order to make time for the JavaScript.
+
+I had to restart the JS portion of this project 3 times, as I kept getting an error at the point where I would add my questions array. The console would tell me which part was not working but I was unsure how to fix it.
+
+The page loads to show a nav bar with a home button and a high scores button. A title, description and start button show. The page is mobile responsive.
+
+When the Start Quiz button is clicked, the first question loads and the timer begins. The timer starts at 40 seconds (10 seconds per question) and counts down. When incorrect answers are selected, my timer decreases by 10 seconds. If the correct answer is selected, the timer stays the same.
+
+When the timer reaches 0, the form should render. If you see in the console, my renderForm function does show 'render form' as text in the console. I tried to target my question-section and use the .remove() in attempt to make the question section disappear. I also tried to append my form-section to the main element. However, I kept getting errors in my console when I did this, which would cause the whole application to stop working.

@@ -59,16 +59,23 @@ const handleOptionClick = (event) => {
   //39. check that click only comes from the li
   if (target.tagName === "LI1") {
     const question = questions[questionIndex].text;
-    console.log(question);
+    //go to next question
+    console.log("next question");
   } else if (target.tagName === "LI2") {
     const question = questions[questionIndex].text;
     timer -= 10;
+    console.log("next question");
+    //go to next question
   } else if (target.tagName === "LI3") {
     const question = questions[questionIndex].text;
     timer -= 10;
+    console.log("next question");
+    //go to next question
   } else if (target.tagName === "LI4") {
     const question = questions[questionIndex].text;
     timer -= 10;
+    console.log("next question");
+    //go to next question
   }
 };
 
