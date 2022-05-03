@@ -9,6 +9,9 @@ const timerSpan = document.getElementById("timer-span");
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
+//40. target form section
+const formSection = document.getElementById("form-section");
+
 //8. target main element
 const mainElement = document.getElementById("main");
 
@@ -153,7 +156,8 @@ const startTimer = () => {
     if (timer === 0) {
       clearInterval(timerId);
       console.log("game over");
-      //render form
+      //41. render form
+      renderForm();
     }
 
     //set text to new timer value
@@ -175,6 +179,11 @@ const startQuiz = () => {
   renderQuestion();
   //7.start timer
   startTimer();
+};
+
+//41. function to render form
+const renderForm = () => {
+  console.log("render form");
 };
 
 //2. event listener for the start button
