@@ -241,16 +241,18 @@ const handleOptionClick = (event) => {
 
   //39. check that click only comes from the li
   if (target.tagName === "LI1") {
-    console.log("clicked li1");
+    const question = questions[questionIndex].text;
+    console.log(question);
   } else if (target.tagName === "LI2") {
-    console.log("clicked li2");
+    const question = questions[questionIndex].text;
+    console.log(question);
   } else if (target.tagName === "LI3") {
-    console.log("clicked li3");
+    const question = questions[questionIndex].text;
+    console.log(question);
   } else if (target.tagName === "LI4") {
-    console.log("clicked li4");
+    const question = questions[questionIndex].text;
+    console.log(question);
   }
-
-  //40. check if target element is li
 };
 
 //5. function to remove banner
