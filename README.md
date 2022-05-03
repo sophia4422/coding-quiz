@@ -32,13 +32,13 @@ Meanwhile:
 - Your score is being tracked
 - The current question you are on is being tracked
 
-GAME OVER:
+Game Over:
 
 - When all questions are answered
 - When remaining time reaches 0
 - Then the form is rendered
 
-FORM:
+Form:
 
 - Please enter full name:
 - Your Score is \*\*\*
@@ -47,12 +47,12 @@ FORM:
 
 # Quiz Theme
 
-When the homework was first presented, I wanted to make the quiz about music. I had an idea of doing a black/green Spotify inspired design. The questions would involve, finish the lyric, guess the album cover, name that song etc. However, for the purposes of time constraints I thought it would be in my best interest to neglect the css and focus more on the functionality of Javascript, as this is my weak point. What good is a pretty quiz if it does not work? ........
+When the homework was first presented, I wanted to make the quiz about music. I had an idea of doing a black/green Spotify inspired design. The questions would involve, finish the lyric, guess the album cover, name that song etc. However, for the purposes of time constraints I thought it would be in my best interest to neglect the css and focus more on the functionality of Javascript, as this is my weak point.
 
 I did not want my quiz to focus solely on code related questions, since this was not mandatory to the brief and also has been done multiple times. I decided instead to do a random, general knowledge quiz, with coding included. I started with four basic questions:
 
-Question 1: What is the capital of Brazil?
-Answers: Brasilia, Rio de Janeiro, São Paulo, Ouro Preto
+**Question 1: What is the capital of Brazil?**
+<br> Answers: Brasilia, Rio de Janeiro, São Paulo, Ouro Preto
 
 <details closed>
 <summary>Answer to Question 1</summary>
@@ -60,8 +60,8 @@ Answers: Brasilia, Rio de Janeiro, São Paulo, Ouro Preto
 Brasilia
 </details>
 
-Question 2: What does HTML stand for?
-Answers: HyperText Market Linkup, HyperText Markup Language, Homepage Text Modem Language, How The Market Looks
+**Question 2: What does HTML stand for?**
+<br> Answers: HyperText Market Linkup, HyperText Markup Language, Homepage Text Modem Language, How The Market Looks
 
 <details closed>
 <summary>Answer to Question 2</summary>
@@ -69,8 +69,8 @@ Answers: HyperText Market Linkup, HyperText Markup Language, Homepage Text Modem
 HyperText Markup Language
 </details>
 
-Question 3: What colours make up the Jamaican flag?
-Answers: Yellow, Black & Green / Red, Yellow & Green / Black, Red & Yellow / Black, Red & Green
+**Question 3: What colours make up the Jamaican flag?**
+<br> Answers: Yellow, Black & Green / Red, Yellow & Green / Black, Red & Yellow / Black, Red & Green
 
 <details closed>
 <summary>Answer to Question 3</summary>
@@ -78,8 +78,8 @@ Answers: Yellow, Black & Green / Red, Yellow & Green / Black, Red & Yellow / Bla
 Yellow, Black & Green
 </details>
 
-Question 4: What is Bruno Mars' real name?
-Answers: Bruno L. Marshall, Bruno Jupiter, Michael Perez, Peter Gene Hernandez
+**Question 4: What is Bruno Mars' real name?**
+<br> Answers: Bruno L. Marshall, Bruno Jupiter, Michael Perez, Peter Gene Hernandez
 
 <details closed>
 <summary>Answer to Question 4</summary>
