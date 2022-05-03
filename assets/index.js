@@ -168,6 +168,7 @@ const removeBanner = () => {
 const renderTimer = () => {
   const timerSection = document.createElement("section");
   timerSection.setAttribute("id", "section-timer");
+  timerSection.setAttribute("class", "timer-section");
 
   const timeRemaining = document.createElement("div");
   timeRemaining.textContent = "Time Remaining: ";
