@@ -13,7 +13,7 @@ const startSection = document.getElementById("start-quiz-banner");
 const mainElement = document.getElementById("main");
 
 //7.3 timer
-let timer = 0;
+let timer = 40;
 
 //26. current question index
 let questionIndex = 0;
@@ -145,7 +145,7 @@ const startTimer = () => {
     console.log("update timer value");
 
     //increment timer by 1
-    timer += 1;
+    timer -= 1;
 
     //set text to new timer value
     timerSpan.textContent = timer;
