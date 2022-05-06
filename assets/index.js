@@ -4,7 +4,7 @@
 const startButton = document.getElementById("start-btn");
 
 //7.4 target timer span
-const timerSpan = document.getElementById("timer-span");
+let timerSpan;
 
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
@@ -16,7 +16,7 @@ const mainElement = document.getElementById("main");
 //const formSection = document.getElementById("form-section");
 
 //42. target the question section to remove it
-const questionSection = document.getElementById("question-section");
+let section = document.getElementById("question-section");
 
 //26. current question index
 let questionIndex = 0;
@@ -103,9 +103,10 @@ const renderQuestion = () => {
   const currentQuestion = questions[questionIndex];
 
   //9. create section
-  const section = document.createElement("section");
+  section = document.createElement("section");
   //12. set class attribute for section
   section.setAttribute("class", "question-container");
+  section.setAttribute("id", "question-container");
   //10. create h2
   const h2 = document.createElement("h2");
   //13. set class attribute for h2
@@ -173,7 +174,7 @@ const renderTimer = () => {
   const timeRemaining = document.createElement("div");
   timeRemaining.textContent = "Time Remaining: ";
 
-  const timerSpan = document.createElement("span");
+  timerSpan = document.createElement("span");
   //set class attribute for span
   timerSpan.setAttribute("id", "timer-span");
   //set timer span text content
@@ -206,7 +207,13 @@ const startTimer = () => {
     //check if timer is equal to 0
     if (timer === 0) {
       clearInterval(timerId);
-      document.getElementById("question-section").remove();
+      console.log(document.getElementById("question-section"));
+      // document.getElementById("question-section").remove();
+
+      console.log(section);
+
+      mainElement.removeChild(section);
+
       console.log("game over");
       //41. render form
       renderForm();
@@ -227,10 +234,10 @@ const startQuiz = () => {
 
   //5. remove question banner
   removeBanner();
-  //6. render first question
-  renderQuestion();
   //7. render timer
   renderTimer();
+  //6. render first question
+  renderQuestion();
   //8.start timer
   startTimer();
 };
