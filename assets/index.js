@@ -205,7 +205,7 @@ const startTimer = () => {
     timerSpan.textContent = timer;
 
     //check if timer is equal to 0
-    if (timer === 0) {
+    if (timer <= 0) {
       clearInterval(timerId);
       console.log(document.getElementById("question-section"));
       // document.getElementById("question-section").remove();

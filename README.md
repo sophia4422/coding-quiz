@@ -96,7 +96,7 @@ The quiz should be responsive to all view ports.
 
 I hit a large roadblock during this homework. I had to restart the JS portion of this project 3 times, as I kept getting an error at the point where I would add my questions array. The console would tell me which part was not working but I was unsure how to fix it.
 
-I created the flow chart below to map out what areas were not working and not working:
+I created this flow chart below to map out what areas were working and not working:
 
 ![Quiz Flowchart](./assets/images/quiz-flowchart.png)
 
