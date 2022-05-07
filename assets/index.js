@@ -28,6 +28,21 @@ const getFromLocalStorage = (key, defaultValue) => {
 
   //parse data from LS
   const parsedData = JSON.parse(dataFromLS);
+
+  if (parsedData) {
+    return parsedData;
+  } else {
+    return defaultValue;
+  }
+};
+
+//push to LS
+const writeToLocalStorage = (key, value) => {
+  //convert value to string
+  const stringifiedValue = JSON.stringify(value);
+
+  //set stringified value to LS for keyname
+  localStorage.setItem(key, stringifiedValue);
 };
 
 //28. all questions array
@@ -279,6 +294,8 @@ const handleFormSubmission = (event) => {
   };
 
   const names = getFromLocalStorage("names", []);
+
+  names.push(name);
 };
 
 formSection.addEventListener("submit", handleFormSubmission);
