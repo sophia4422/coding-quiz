@@ -276,6 +276,59 @@ const renderForm = () => {
   formSection.setAttribute("class", "form-container");
   formSection.setAttribute("id", "form-section");
 
+  //create form
+  const form = document.createElement("form");
+  // set id attribute for form since it has no css
+  form.setAttribute("id", "form-box");
+
+  //create div and append label and input
+  const divForForm = document.createElement("div");
+  //set id attribute for div
+  divForForm.setAttribute("id", "full-name");
+
+  //create label
+  const label = document.createElement("label");
+  //set id attribute for label
+  label.setAttribute("id", "label-name");
+
+  //create input
+  const input = document.createElement("input");
+  //18. set id attribute for input
+  input.setAttribute("id", "full-name-input");
+
+  //create div and create button
+  const divForButton = document.createElement("div");
+  //set class attribute for div
+  divForButton.setAttribute("class", "submit-container");
+  //set id attribute for div
+  divForButton.setAttribute("id", "submit-box");
+
+  //create button
+  const button = document.createElement("button");
+  //set class attribute for submit button
+  button.setAttribute("class", "submit-button");
+  //set id attribute for submit button
+  button.setAttribute("id", "button-submit");
+
+  //append each section to each other
+
+  //append BUTTON TO DIV
+  divForButton.append(button);
+
+  //append DIV to SECTION
+  section.append(divForButton);
+
+  //__________
+
+  //append LABEL and iNPUT to DIV
+  divForForm.append(label, input);
+
+  //append DIV to FORM
+  form.append(divForForm);
+
+  //append FORM to SECTION
+  section.append(form);
+
   //append section to main section
   mainElement.append(formSection);
 };
@@ -296,6 +349,8 @@ const handleFormSubmission = (event) => {
   const names = getFromLocalStorage("names", []);
 
   names.push(name);
+
+  writeToLocalStorage("names", names);
 };
 
 formSection.addEventListener("submit", handleFormSubmission);
