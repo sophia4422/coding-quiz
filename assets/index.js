@@ -13,13 +13,22 @@ const startSection = document.getElementById("start-quiz-banner");
 const mainElement = document.getElementById("main");
 
 //40. target form section
-//const formSection = document.getElementById("form-section");
+const formSection = document.getElementById("form-section");
 
 //42. target the question section to remove it
 let section = document.getElementById("question-section");
 
 //26. current question index
 let questionIndex = 0;
+
+//local storage function
+const getFromLocalStorage = (key, defaultValue) => {
+  //get from LS using key name
+  const dataFromLS = localStorage.getItem(key);
+
+  //parse data from LS
+  const parsedData = JSON.parse(dataFromLS);
+};
 
 //28. all questions array
 const questions = [
@@ -246,7 +255,7 @@ const startQuiz = () => {
 const renderForm = () => {
   console.log("render form");
   //remove the timer
-  document.getElementById("section-timer").remove(); //KEEP GETTING CONSOLE ERROR
+  document.getElementById("section-timer").remove();
 
   const formSection = document.createElement("section");
   formSection.setAttribute("class", "form-container");
@@ -255,6 +264,24 @@ const renderForm = () => {
   //append section to main section
   mainElement.append(formSection);
 };
+
+const handleFormSubmission = (event) => {
+  event.preventDefault();
+  console.log("form submitted");
+
+  //get the name
+  const fullName = document.getElementById("full-name-input").value;
+  console.log(fullName);
+
+  //create object
+  const name = {
+    fullName: fullName,
+  };
+
+  const names = getFromLocalStorage("names", []);
+};
+
+formSection.addEventListener("submit", handleFormSubmission);
 
 //2. event listener for the start button
 // this is called a higher order function
