@@ -94,9 +94,13 @@ The quiz should be responsive to all view ports.
 
 # Meeting the Brief
 
-Unfortunately, the appearance of the quiz is not how I would have liked it to look. I did not put much time into the css in order to make time for the JavaScript.
+I hit a large roadblock during this homework. I had to restart the JS portion of this project 3 times, as I kept getting an error at the point where I would add my questions array. The console would tell me which part was not working but I was unsure how to fix it.
 
-I had to restart the JS portion of this project 3 times, as I kept getting an error at the point where I would add my questions array. The console would tell me which part was not working but I was unsure how to fix it.
+I created the flow chart below to map out what areas were not working and not working:
+
+![Quiz Flowchart](./assets/images/quiz-flowchart.png)
+
+Unfortunately, the appearance of the quiz is not how I would have liked it to look. I did not put much time into the css in order to make time for the JavaScript.
 
 The page loads to show a nav bar with a home button and a high scores button. A title, description and start button show. The page is mobile responsive.
 
