@@ -112,7 +112,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  display: none; /*EDIT LATER*/
+  /*display: none; /*EDIT LATER*/
 }
 
 .submit-container {

@@ -84,6 +84,13 @@ const questions = [
   },
 ];
 
+//42. function to remove question section
+const removeBanner = () => {
+  console.log("remove banner");
+
+  startSection.remove();
+};
+
 //7.3 timer
 let timer = 10 * questions.length;
 
@@ -180,13 +187,6 @@ const renderQuestion = () => {
 
   //34. add event listener on question section
   section.addEventListener("click", handleOptionClick);
-};
-
-//42. function to remove question section
-const removeBanner = () => {
-  console.log("remove banner");
-
-  startSection.remove();
 };
 
 //7. Render timer
@@ -310,8 +310,6 @@ const renderForm = () => {
   //set id attribute for submit button
   button.setAttribute("id", "button-submit");
 
-  //append each section to each other
-
   //append BUTTON TO DIV
   divForButton.append(button);
 
@@ -353,7 +351,7 @@ const handleFormSubmission = (event) => {
   writeToLocalStorage("names", names);
 };
 
-formSection.addEventListener("submit", handleFormSubmission);
+//formSection.addEventListener("submit", handleFormSubmission);
 
 //2. event listener for the start button
 // this is called a higher order function
