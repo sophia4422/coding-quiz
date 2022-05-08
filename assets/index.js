@@ -3,23 +3,60 @@
 //1. target the start button
 const startButton = document.getElementById("start-btn");
 
-//7.4 target timer span
-let timerSpan;
-
 //4. target the general knowledge / start section to remove it
 const startSection = document.getElementById("start-quiz-banner");
 
 //8. target main element
 const mainElement = document.getElementById("main");
 
-//40. target form section
-const formSection = document.getElementById("form-section");
-
-//42. target the question section to remove it
-let section = document.getElementById("question-section");
+//28. all questions array
+const questions = [
+  {
+    text: "What is the capital of Brazil?",
+    options: ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"],
+    correctAnswer: "Brasilia",
+  },
+  {
+    text: "What does HTML stand for?",
+    options: [
+      "HyperText Market Linkup",
+      "Homepage Text Modem Language",
+      "How The Market Looks",
+      "HyperText Markup Language",
+    ],
+    correctAnswer: "HyperText Markup Language",
+  },
+  {
+    text: "What colours make up the Jamaican flag?",
+    options: [
+      "Red, Yellow & Green",
+      "Black, Red & Yellow",
+      "Black, Red & Green",
+      "Yellow, Black & Green",
+    ],
+    correctAnswer: "Yellow, Black & Green",
+  },
+  {
+    text: "What is Bruno Mars' real name?",
+    options: [
+      "Bruno L. Marshall",
+      "Peter Gene Hernandez",
+      "Bruno Jupiter",
+      "Michael Perez",
+    ],
+    correctAnswer: "Peter Gene Hernandez",
+  },
+];
 
 //26. current question index
 let questionIndex = 0;
+
+//7.3 timer
+let timer = 10 * questions.length;
+
+//7.4 target timer span
+let timerSpan;
+let timerId;
 
 //local storage function
 const getFromLocalStorage = (key, defaultValue) => {
@@ -45,54 +82,12 @@ const writeToLocalStorage = (key, value) => {
   localStorage.setItem(key, stringifiedValue);
 };
 
-//28. all questions array
-const questions = [
-  {
-    text: "What is the capital of Brazil?",
-    options: ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"],
-    correctAnswer: "Brasilia",
-  },
-  {
-    text: "What does HTML stand for?",
-    options: [
-      "HyperText Market Linkup",
-      "HyperText Markup Language",
-      "Homepage Text Modem Language",
-      "How The Market Looks",
-    ],
-    correctAnswer: "HyperText Markup Language",
-  },
-  {
-    text: "What colours make up the Jamaican flag?",
-    options: [
-      "Yellow, Black & Green",
-      "Red, Yellow & Green",
-      "Black, Red & Yellow",
-      "Black, Red & Green",
-    ],
-    correctAnswer: "Yellow, Black & Green",
-  },
-  {
-    text: "What is Bruno Mars' real name?",
-    options: [
-      "Bruno L. Marshall",
-      "Bruno Jupiter",
-      "Michael Perez",
-      "Peter Gene Hernandez",
-    ],
-    correctAnswer: "Peter Gene Hernandez",
-  },
-];
-
 //42. function to remove question section
 const removeBanner = () => {
   console.log("remove banner");
 
   startSection.remove();
 };
-
-//7.3 timer
-let timer = 10 * questions.length;
 
 //36. handleOptionClick function to handle click events in question section
 const handleOptionClick = (event) => {
@@ -104,25 +99,36 @@ const handleOptionClick = (event) => {
   const target = event.target;
 
   //39. check that click only comes from the li
-  if (target.tagName === "LI1") {
-    const question = questions[questionIndex].text;
-    //go to next question
-    console.log("next question");
-  } else if (target.tagName === "LI2") {
-    const question = questions[questionIndex].text;
-    timer -= 10;
-    console.log("next question");
-    //go to next question
-  } else if (target.tagName === "LI3") {
-    const question = questions[questionIndex].text;
-    timer -= 10;
-    console.log("next question");
-    //go to next question
-  } else if (target.tagName === "LI4") {
-    const question = questions[questionIndex].text;
-    timer -= 10;
-    console.log("next question");
-    //go to next question
+  if (target.tagName === "LI") {
+    const correctAnswer = questions[questionIndex].correctAnswer;
+    const userAnswer = target.getAttribute("data-value");
+
+    if (correctAnswer !== userAnswer) {
+      console.log("INCORRECT");
+      timer -= 10;
+    }
+
+    removeQuestion();
+
+    if (questionIndex < questions.length - 1) {
+      // if not last question
+
+      questionIndex += 1;
+
+      renderQuestion();
+    } else {
+      // stop timer
+      clearInterval(timerId);
+      console.log("render form");
+      renderForm();
+    }
+  }
+};
+
+// remove the rendered question if exists
+const removeQuestion = () => {
+  if (document.getElementById("question-container")) {
+    document.getElementById("question-container").remove();
   }
 };
 
@@ -152,27 +158,31 @@ const renderQuestion = () => {
   //16. loop over options to create and append li to ul
 
   //17.create four list items, li1:
-  const li1 = document.createElement("li1");
+  const li1 = document.createElement("li");
   //18. set class attribute for li1
   li1.setAttribute("class", "answers-item");
+  li1.setAttribute("data-value", currentQuestion.options[0]);
   //19/30. set h2 text content
   li1.textContent = currentQuestion.options[0];
 
   //20. li2:
-  const li2 = document.createElement("li2");
+  const li2 = document.createElement("li");
   li2.setAttribute("class", "answers-item");
+  li2.setAttribute("data-value", currentQuestion.options[1]);
   //31. answers taken from array
   li2.textContent = currentQuestion.options[1];
 
   //21. li3:
-  const li3 = document.createElement("li3");
+  const li3 = document.createElement("li");
   li3.setAttribute("class", "answers-item");
+  li3.setAttribute("data-value", currentQuestion.options[2]);
   //32.
   li3.textContent = currentQuestion.options[2];
 
   //22. li4:
-  const li4 = document.createElement("li4");
+  const li4 = document.createElement("li");
   li4.setAttribute("class", "answers-item");
+  li4.setAttribute("data-value", currentQuestion.options[3]);
   //33.
   li4.textContent = currentQuestion.options[3];
 
@@ -231,24 +241,19 @@ const startTimer = () => {
     //check if timer is equal to 0
     if (timer <= 0) {
       clearInterval(timerId);
-      console.log(document.getElementById("question-section"));
-      // document.getElementById("question-section").remove();
 
-      console.log(section);
-
-      mainElement.removeChild(section);
+      removeQuestion();
 
       console.log("game over");
-      //41. render form
-      renderForm();
+      //41. render game over
     }
 
     //set text to new timer value
-    timerSpan.textContent = timer;
+    timerSpan.textContent = timer > 0 ? timer : 0;
   };
 
   //7.1 repeat code for fixed interval
-  const timerId = setInterval(updateTimerValue, 1000);
+  timerId = setInterval(updateTimerValue, 1000);
   console.log(timerId);
 };
 
@@ -270,7 +275,7 @@ const startQuiz = () => {
 const renderForm = () => {
   console.log("render form");
   //remove the timer
-  document.getElementById("section-timer").remove();
+  // document.getElementById("section-timer").remove();
 
   const formSection = document.createElement("section");
   formSection.setAttribute("class", "form-container");
@@ -282,19 +287,18 @@ const renderForm = () => {
   form.setAttribute("id", "form-box");
 
   //create div and append label and input
-  const divForForm = document.createElement("div");
+  const divForInput = document.createElement("div");
   //set id attribute for div
-  divForForm.setAttribute("id", "full-name");
-
-  //create label
-  const label = document.createElement("label");
-  //set id attribute for label
-  label.setAttribute("id", "label-name");
+  divForInput.setAttribute("id", "full-name");
 
   //create input
   const input = document.createElement("input");
   //18. set id attribute for input
   input.setAttribute("id", "full-name-input");
+  input.setAttribute("placeholder", "Enter full name");
+
+  //append LABEL and iNPUT to DIV
+  divForInput.append(input);
 
   //create div and create button
   const divForButton = document.createElement("div");
@@ -309,26 +313,22 @@ const renderForm = () => {
   button.setAttribute("class", "submit-button");
   //set id attribute for submit button
   button.setAttribute("id", "button-submit");
+  button.textContent = "Submit";
 
   //append BUTTON TO DIV
   divForButton.append(button);
 
-  //append DIV to SECTION
-  section.append(divForButton);
-
-  //__________
-
-  //append LABEL and iNPUT to DIV
-  divForForm.append(label, input);
-
   //append DIV to FORM
-  form.append(divForForm);
+  form.append(divForInput, divForButton);
 
   //append FORM to SECTION
-  section.append(form);
+  formSection.append(form);
 
   //append section to main section
   mainElement.append(formSection);
+
+  // add event listener to form
+  form.addEventListener("submit", handleFormSubmission);
 };
 
 const handleFormSubmission = (event) => {
@@ -340,18 +340,17 @@ const handleFormSubmission = (event) => {
   console.log(fullName);
 
   //create object
-  const name = {
+  const scoreObject = {
     fullName: fullName,
+    score: timer,
   };
 
-  const names = getFromLocalStorage("names", []);
+  const highscores = getFromLocalStorage("highscores", []);
 
-  names.push(name);
+  highscores.push(scoreObject);
 
-  writeToLocalStorage("names", names);
+  writeToLocalStorage("highscores", highscores);
 };
-
-//formSection.addEventListener("submit", handleFormSubmission);
 
 //2. event listener for the start button
 // this is called a higher order function
