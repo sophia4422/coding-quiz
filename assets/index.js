@@ -241,11 +241,8 @@ const startTimer = () => {
     //check if timer is equal to 0
     if (timer <= 0) {
       clearInterval(timerId);
-
+      alert("Game Over!");
       removeQuestion();
-
-      console.log("game over");
-      //41. render game over
     }
 
     //set text to new timer value
