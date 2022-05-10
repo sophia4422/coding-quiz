@@ -84,15 +84,11 @@ const writeToLocalStorage = (key, value) => {
 
 //42. function to remove question section
 const removeBanner = () => {
-  console.log("remove banner");
-
   startSection.remove();
 };
 
 //36. handleOptionClick function to handle click events in question section
 const handleOptionClick = (event) => {
-  console.log("clicked inside question section");
-
   //37. get current target
   const currentTarget = event.currentTarget;
   //38. get target
@@ -104,7 +100,6 @@ const handleOptionClick = (event) => {
     const userAnswer = target.getAttribute("data-value");
 
     if (correctAnswer !== userAnswer) {
-      console.log("INCORRECT");
       timer -= 10;
     }
 
@@ -119,7 +114,7 @@ const handleOptionClick = (event) => {
     } else {
       // stop timer
       clearInterval(timerId);
-      console.log("render form");
+
       renderForm();
     }
   }
@@ -134,8 +129,6 @@ const removeQuestion = () => {
 
 //6. function to render question to page
 const renderQuestion = () => {
-  console.log("render question");
-
   //29. get current question
   const currentQuestion = questions[questionIndex];
 
@@ -227,12 +220,8 @@ const renderTimer = () => {
 //7. function to start timer
 //this is a callback function
 const startTimer = () => {
-  console.log("timer started");
-
   //7.2 function for updateTimerValue
   const updateTimerValue = () => {
-    console.log("update timer value");
-
     //decrement timer by 1
     timer -= 1;
 
@@ -251,13 +240,10 @@ const startTimer = () => {
 
   //7.1 repeat code for fixed interval
   timerId = setInterval(updateTimerValue, 1000);
-  console.log(timerId);
 };
 
 //3. declare the event handler function for the start button click
 const startQuiz = () => {
-  console.log("button clicked");
-
   //5. remove question banner
   removeBanner();
   //7. render timer
@@ -270,7 +256,6 @@ const startQuiz = () => {
 
 //41. function to render form
 const renderForm = () => {
-  console.log("render form");
   //remove the timer
   // document.getElementById("section-timer").remove();
 
@@ -330,11 +315,9 @@ const renderForm = () => {
 
 const handleFormSubmission = (event) => {
   event.preventDefault();
-  console.log("form submitted");
 
   //get the name
   const fullName = document.getElementById("full-name-input").value;
-  console.log(fullName);
 
   //create object
   const scoreObject = {
