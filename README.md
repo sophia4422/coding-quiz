@@ -4,6 +4,8 @@ This challenge was to create an interactive, timed quiz using HTML, CSS and Java
 
 Click here to see the deployed page: https://sophia4422.github.io/coding-quiz/
 
+![Quiz Homepage](./assets/images/quiz-homepage.png)
+
 # User Journey
 
 1. The page loads to show the nav bar, the quiz title, a description and a start button
@@ -75,6 +77,8 @@ Yellow, Black & Green
 Peter Gene Hernandez
 </details>
 
+![Question One](./assets/images/question-one.png)
+
 # Quiz Features
 
 - Navigation Bar
@@ -87,10 +91,6 @@ Peter Gene Hernandez
 - 4 multiple choice questions
 - Form to add your name and save your highscore once the quiz has finished
 
-The High Scores page will also feature a Go Back button that takes you to home page. There will also be a Clear button that clears high scores in local storage. When you load page with no high scores, a render message says 'No Scores' will appear.
-
-The quiz should be responsive to all view ports.
-
 # Meeting the Brief
 
 The page loads to show a nav bar with a home button and a high scores button. A title, description and start button show. The page is mobile responsive. Unfortunately, the appearance of the quiz is not how I would have liked it to look. I did not put much time into the css in order to make time for the JavaScript.
@@ -102,3 +102,7 @@ I then hit a large roadblock during this homework and I was struggling to fix ce
 I created this flow chart below to map out what areas were working and not working:
 
 ![Quiz Flowchart](./assets/images/quiz-flowchart.png)
+
+Below is my final flow chart to show the completed parts and areas of improvement:
+
+![Final Flowchart](./assets/images/final-quiz.png)
