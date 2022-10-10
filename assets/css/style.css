@@ -199,3 +199,34 @@
   font-weight: 300;
   margin-left: 10px;
 }
+
+/* highscores page */
+
+.highscores-section {
+  text-align: center;
+}
+
+.highscore-title {
+  font-size: 40px;
+  color: white;
+}
+
+#all-scores {
+  width: 24rem;
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+#all-scores th {
+  color: white;
+  font-size: 1.2rem;
+}
+
+#all-scores tr:nth-child(odd) td {
+  background-color: var(--beige);
+}
+
+#all-scores tr:nth-child(even) td {
+  background-color: white;
+  color: #222422;
+}

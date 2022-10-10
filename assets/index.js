@@ -373,11 +373,11 @@ const handleFormSubmission = (event) => {
   event.preventDefault();
 
   //get the name
-  const fullName = document.getElementById("full-name-input").value;
+  const nameInput = document.getElementById("full-name-input").value;
 
-  if (fullName !== "") {
+  if (nameInput !== "") {
     const player = {
-      userName: fullName,
+      userName: nameInput,
       score: timer,
     };
 
