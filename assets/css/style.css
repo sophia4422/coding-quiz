@@ -197,12 +197,21 @@
   background-color: #1ecd97;
   height: 5vh;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer h3 {
   color: #222422;
   font-weight: 300;
   margin-left: 10px;
+}
+
+.social-icon {
+  color: #222422;
+}
+
+.social-icon:hover {
+  color: white;
 }
 
 /* highscores page */
