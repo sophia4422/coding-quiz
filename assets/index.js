@@ -41,6 +41,16 @@ const questions = [
     ],
     correctAnswer: "Fenty Beauty",
   },
+  {
+    text: "Who wrote the 2016 album titled: Blonde ?",
+    options: [
+      "The Weeknd",
+      "Megan Thee Stallion",
+      "Justin Bieber",
+      "Frank Ocean",
+    ],
+    correctAnswer: "Frank Ocean",
+  },
 ];
 
 //26. current question index
