@@ -12,39 +12,34 @@ const mainElement = document.getElementById("main");
 //28. all questions array
 const questions = [
   {
-    text: "What is the capital of Brazil?",
-    options: ["Brasilia", "Rio de Janeiro", "São Paulo", "Ouro Preto"],
-    correctAnswer: "Brasilia",
+    text: "What is Nicki Minaj's real name?",
+    options: ["Onika Minak", "Roman Zolanski", "Onika Maraj", "Nicole Roman"],
+    correctAnswer: "Onika Maraj",
   },
   {
-    text: "What does HTML stand for?",
+    text: "Where is Drake from?",
     options: [
-      "HyperText Market Linkup",
-      "Homepage Text Modem Language",
-      "How The Market Looks",
-      "HyperText Markup Language",
+      "Malibu, California",
+      "Vancouver, Canada",
+      "Queens, New York",
+      "Toronto, Canada",
     ],
-    correctAnswer: "HyperText Markup Language",
+    correctAnswer: "Toronto, Canada",
   },
   {
-    text: "What colours make up the Jamaican flag?",
-    options: [
-      "Red, Yellow & Green",
-      "Black, Red & Yellow",
-      "Black, Red & Green",
-      "Yellow, Black & Green",
-    ],
-    correctAnswer: "Yellow, Black & Green",
+    text: "How many Grammys has Beyoncé won?",
+    options: ["5", "28", "102", "34"],
+    correctAnswer: "28",
   },
   {
-    text: "What is Bruno Mars' real name?",
+    text: "What is Rihanna's cosmetic company called?",
     options: [
-      "Bruno L. Marshall",
-      "Peter Gene Hernandez",
-      "Bruno Jupiter",
-      "Michael Perez",
+      "Makeup by Rihanna",
+      "Fenty Beauty",
+      "Rih Rih Cosmetics",
+      "Navy Beauty",
     ],
-    correctAnswer: "Peter Gene Hernandez",
+    correctAnswer: "Fenty Beauty",
   },
 ];
 

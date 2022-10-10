@@ -2,7 +2,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gotham-Light";
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("./assets/fonts/Gotham-Light.otf");
 }
 
 /* header and nav */
@@ -43,12 +48,20 @@
 }
 
 .start-button {
-  background-color: pink;
-  padding: 10px;
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid #1ecd97;
+  color: #1ecd97;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
 }
 
 .start-button:hover {
-  background-color: rgb(70, 205, 192);
+  background: #1ecd97;
+  color: #333;
 }
 
 /* css below this is for the timer and questions */
@@ -92,15 +105,21 @@
 }
 
 .answers-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-style: groove;
-  border-radius: 8px;
-  border-color: aqua;
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid #1ecd97;
+  color: #1ecd97;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  margin-bottom: 5px;
 }
 
 .answers-item:hover {
-  background-color: rgb(70, 205, 192);
+  background: #1ecd97;
+  color: #333;
 }
 
 /* FORM AT THE END */
