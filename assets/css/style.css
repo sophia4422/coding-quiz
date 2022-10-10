@@ -14,37 +14,40 @@
 
 .header {
   padding: 10px;
-  background-color: rgb(70, 205, 192);
+  background-color: #222422;
 }
 
-.nav-button:hover {
+.nav-button {
+  text-decoration: none;
   color: white;
+  margin-right: 10px;
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  text-align: right;
 }
 /* main section */
 .section-container {
   padding: 100px;
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 89vh;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(134, 222, 183);
+  background-color: #222422;
   /*display: none; /* DELETE THIS LATER */
 }
 
 .title {
-  text-align: center;
+  color: white;
+  font-size: 10vw;
 }
 
 .quiz-descrip {
   text-align: center;
   padding: 20px;
+  color: white;
+  font-size: 2vw;
 }
 
 .start-button {
@@ -67,33 +70,33 @@
 /* css below this is for the timer and questions */
 
 .timer-section {
-  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(70, 175, 189);
+  background-color: #1ecd97;
+  height: 10vh;
+  color: #222422;
+  font-weight: bold;
   /* CHANGE LATER */
-}
-
-.timer {
-  color: beige;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .question-container {
   padding: 50px;
-  background-color: aquamarine;
+  background-color: #222422;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 79vh;
   /*display: none; /* CHANGE LATER */
 }
 
 .question-title {
   padding: 20px;
   text-align: center;
+  color: white;
+  font-size: 5vw;
 }
 
 .answer-container {
@@ -149,4 +152,17 @@
 /* hide class */
 .hide {
   display: none;
+}
+
+.footer {
+  display: flex;
+  background-color: #1ecd97;
+  height: 5vh;
+  align-items: center;
+}
+
+.footer h3 {
+  color: #222422;
+  font-weight: 300;
+  margin-left: 10px;
 }
