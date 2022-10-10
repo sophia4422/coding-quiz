@@ -69,33 +69,25 @@ const renderAlert = (answerStatus) => {
   document.getElementById("question-container").append(confirmResult);
 };
 
-//local storage function
-const getFromLocalStorage = (key, defaultValue) => {
-  //get from LS using key name
-  const dataFromLS = localStorage.getItem(key);
-
-  //parse data from LS
-  const parsedData = JSON.parse(dataFromLS);
-
-  if (parsedData) {
-    return parsedData;
-  } else {
-    return defaultValue;
-  }
-};
-
-//push to LS
-const writeToLocalStorage = (key, value) => {
-  //convert value to string
-  const stringifiedValue = JSON.stringify(value);
-
-  //set stringified value to LS for keyname
-  localStorage.setItem(key, stringifiedValue);
-};
-
 //42. function to remove question section
 const removeBanner = () => {
   startSection.remove();
+};
+
+const onLoad = () => {
+  // check if highscores exists in LS
+  const highScores = readFromLocalStorage();
+  // if false then set highscores to empty array in LS
+  if (!highScores) {
+    localStorage.setItem("highscores", JSON.stringify([]));
+  }
+};
+
+// getScores from local storage
+const readFromLocalStorage = () => {
+  // get from LS by key and parse
+  const parsedData = JSON.parse(localStorage.getItem("highscores"));
+  return parsedData;
 };
 
 //36. handleOptionClick function to handle click events in question section
@@ -383,19 +375,39 @@ const handleFormSubmission = (event) => {
   //get the name
   const fullName = document.getElementById("full-name-input").value;
 
-  //create object
-  const scoreObject = {
-    fullName: fullName,
-    score: timer,
-  };
+  if (fullName !== "") {
+    const player = {
+      userName: fullName,
+      score: timer,
+    };
 
-  const highscores = getFromLocalStorage("highscores", []);
+    const highScores = readFromLocalStorage();
 
-  highscores.push(scoreObject);
+    highScores.push(player);
 
-  writeToLocalStorage("highscores", highscores);
+    // sort scores high to low
+    highScores.sort((a, b) => b.score - a.score);
+
+    writeToLocalStorage("highscores", highScores);
+
+    renderHighScores();
+  }
+};
+
+const writeToLocalStorage = (key, value) => {
+  // stringify object value
+  const stringifiedValue = JSON.stringify(value);
+  //   set value for each key within LS
+  localStorage.setItem(key, stringifiedValue);
+};
+
+const renderHighScores = () => {
+  window.location = "highscores.html";
 };
 
 //2. event listener for the start button
 // this is called a higher order function
 startButton.addEventListener("click", startQuiz);
+
+// document on load event listener
+window.addEventListener("load", onLoad);
