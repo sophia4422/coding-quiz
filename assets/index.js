@@ -234,6 +234,10 @@ const renderGameOver = () => {
   startAgain.setAttribute("id", "start-again");
   startAgain.textContent = "Play Again";
 
+  startAgain.addEventListener("click", function () {
+    document.location.href = "/index.html";
+  });
+
   gameOverSection.append(gameOverTitle);
   gameOverSection.append(gameOverPara);
   gameOverSection.append(startAgain);
