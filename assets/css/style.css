@@ -77,8 +77,8 @@
   height: 10vh;
   color: #222422;
   font-weight: bold;
-  /* CHANGE LATER */
   font-size: 22px;
+  text-transform: uppercase;
 }
 
 .question-container {

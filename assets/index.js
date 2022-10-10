@@ -212,6 +212,35 @@ const renderTimer = () => {
   mainElement.append(timerSection);
 };
 
+const renderGameOver = () => {
+  document.getElementById("section-timer").remove();
+
+  const gameOverSection = document.createElement("section");
+  gameOverSection.setAttribute("class", "section-container");
+  gameOverSection.setAttribute("id", "game-over-banner");
+
+  const gameOverTitle = document.createElement("h1");
+  gameOverTitle.setAttribute("class", "title");
+  gameOverTitle.setAttribute("id", "game-over-title");
+  gameOverTitle.textContent = "Game Over";
+
+  const gameOverPara = document.createElement("h1");
+  gameOverPara.setAttribute("class", "quiz-descrip");
+  gameOverPara.setAttribute("id", "game-over-para");
+  gameOverPara.textContent = "Oops! You ran out of time! Want to try again?";
+
+  gameOverSection.append(gameOverTitle);
+  gameOverSection.append(gameOverPara);
+  mainElement.append(gameOverSection);
+
+  // const para = document.createElement("p");
+  // p.setAttribute("class", "quiz-descrip");
+
+  // section.append(h1, para);
+
+  // mainElement.append(section);
+};
+
 //7. function to start timer
 //this is a callback function
 const startTimer = () => {
@@ -225,8 +254,8 @@ const startTimer = () => {
     //check if timer is equal to 0
     if (timer <= 0) {
       clearInterval(timerId);
-      alert("Game Over!");
       removeQuestion();
+      renderGameOver();
     }
 
     //set text to new timer value
