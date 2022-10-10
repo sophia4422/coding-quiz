@@ -46,12 +46,28 @@ const questions = [
 //26. current question index
 let questionIndex = 0;
 
+let quizComplete = false;
+
 //7.3 timer
 let timer = 10 * questions.length;
 
 //7.4 target timer span
 let timerSpan;
 let timerId;
+
+const renderAlert = (answerStatus) => {
+  const confirmResult = document.createElement("h2");
+  confirmResult.setAttribute("class", "confirm-result");
+  if (answerStatus == "Correct") {
+    confirmResult.setAttribute("id", "correct");
+    confirmResult.textContent = `${answerStatus}... You got it!`;
+  } else {
+    confirmResult.setAttribute("id", "incorrect");
+    confirmResult.textContent = `${answerStatus}... Oops!`;
+  }
+  // append div to #question-section
+  document.getElementById("question-container").append(confirmResult);
+};
 
 //local storage function
 const getFromLocalStorage = (key, defaultValue) => {
@@ -95,23 +111,43 @@ const handleOptionClick = (event) => {
     const userAnswer = target.getAttribute("data-value");
 
     if (correctAnswer !== userAnswer) {
+      answerStatus = "Incorrect";
       timer -= 10;
-    }
-
-    removeQuestion();
-
-    if (questionIndex < questions.length - 1) {
-      // if not last question
-
-      questionIndex += 1;
-
-      renderQuestion();
     } else {
-      // stop timer
-      clearInterval(timerId);
-
-      renderForm();
+      answerStatus = "Correct";
     }
+    renderAlert(answerStatus);
+
+    setTimeout(() => {
+      removeQuestion();
+
+      if (questionIndex < questions.length - 1) {
+        // if question is not last question then increment question index and render next question
+        questionIndex += 1;
+
+        renderQuestion();
+      } else {
+        // if question is last question set quizComplete to true and then render form
+        clearInterval(timerId);
+
+        renderForm();
+      }
+    }, 1000);
+
+    //   if (questionIndex < questions.length - 1) {
+    //     // if not last question
+
+    //     questionIndex += 1;
+
+    //     renderQuestion();
+    //   } else {
+    //     // stop timer
+    //     clearInterval(timerId);
+
+    //     renderForm();
+    //   }
+    //   1000
+    // }
   }
 };
 
