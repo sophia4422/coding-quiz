@@ -223,10 +223,17 @@
 }
 
 #all-scores tr:nth-child(odd) td {
-  background-color: var(--beige);
+  background-color: white;
+  color: #222422;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
 #all-scores tr:nth-child(even) td {
-  background-color: white;
+  background-color: #1ecd97;
   color: #222422;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
 }
