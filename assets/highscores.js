@@ -29,12 +29,16 @@ const displayScores = () => {
     const playBtn = document.createElement("button");
     playBtn.setAttribute("class", "start-button");
     playBtn.setAttribute("id", "start-btn");
-    playBtn.textContent = "Start Quiz!";
+    playBtn.textContent = "Home";
 
     hsSection.append(hsTitle);
     hsSection.append(message);
     hsSection.append(playBtn);
     mainElement.append(hsSection);
+
+    document.getElementById("start-btn").addEventListener("click", function () {
+      document.location.href = "/index.html";
+    });
   } else {
     const tableSection = document.createElement("section");
     tableSection.setAttribute("class", "section-container");
@@ -46,6 +50,16 @@ const displayScores = () => {
 
     const tableHeader = document.createElement("table");
     tableHeader.setAttribute("id", "all-scores");
+
+    const playAgain = document.createElement("button");
+    playAgain.setAttribute("class", "start-button");
+    playAgain.setAttribute("id", "restart");
+    playAgain.textContent = "Replay";
+
+    const clearBtn = document.createElement("button");
+    clearBtn.setAttribute("class", "start-button");
+    clearBtn.setAttribute("id", "clear-scores");
+    clearBtn.textContent = "Clear Highscores";
 
     highScores.forEach((highScore) => {
       const tableRow = document.createElement("tr");
@@ -62,10 +76,22 @@ const displayScores = () => {
     });
     tableSection.append(titleTwo);
     tableSection.append(tableHeader);
-
+    tableSection.append(playAgain);
+    tableSection.append(clearBtn);
     mainElement.append(tableSection);
+
+    document.getElementById("clear-scores").addEventListener("click", () => {
+      localStorage.clear();
+      tableSection.remove();
+      displayScores();
+    });
+
+    document.getElementById("restart").addEventListener("click", function () {
+      document.location.href = "/index.html";
+    });
   }
 };
+
 window.addEventListener("load", displayScores);
 
 // const div = document.createElement("div");
