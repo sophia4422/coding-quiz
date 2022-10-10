@@ -229,16 +229,15 @@ const renderGameOver = () => {
   gameOverPara.setAttribute("id", "game-over-para");
   gameOverPara.textContent = "Oops! You ran out of time! Want to try again?";
 
+  const startAgain = document.createElement("button");
+  startAgain.setAttribute("class", "start-button");
+  startAgain.setAttribute("id", "start-again");
+  startAgain.textContent = "Play Again";
+
   gameOverSection.append(gameOverTitle);
   gameOverSection.append(gameOverPara);
+  gameOverSection.append(startAgain);
   mainElement.append(gameOverSection);
-
-  // const para = document.createElement("p");
-  // p.setAttribute("class", "quiz-descrip");
-
-  // section.append(h1, para);
-
-  // mainElement.append(section);
 };
 
 //7. function to start timer
