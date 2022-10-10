@@ -23,6 +23,10 @@
   margin-right: 10px;
 }
 
+.nav-button:hover {
+  color: #1ecd97;
+}
+
 .navbar {
   text-align: right;
 }
@@ -237,4 +241,10 @@
   padding: 5px;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  .quiz-descrip {
+    font-size: 25px;
+  }
 }

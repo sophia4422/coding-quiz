@@ -93,36 +93,3 @@ const displayScores = () => {
 };
 
 window.addEventListener("load", displayScores);
-
-// const div = document.createElement("div");
-// div.setAttribute("class", "highscores-section");
-
-// const tableHeader = document.getElementById("all-scores");
-
-// highScores.forEach((highScore) => {
-//   const tableRow = document.createElement("tr");
-
-//   const tableName = document.createElement("td");
-//   tableName.textContent = "hiiii"
-
-//   highScore.userName;
-
-//   const tableScore = document.createElement("td");
-//   tableScore.textContent = highScore.score;
-
-//   tableSection.append(div, tableHeader);
-
-//   tableHeader.append(tableRow);
-
-//   tableRow.append(tableName, tableScore);
-
-//   tableRow.append(tableName);
-//   tableHeader.append(tableRow);
-//   div.append(tableHeader);
-//   tableSection.append(div);
-//   mainElement.append(tableSection);
-
-// document.getElementById("clear-scores").addEventListener("click", () => {
-//   localStorage.clear();
-//   displayScores();
-// });
