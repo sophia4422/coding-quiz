@@ -127,14 +127,29 @@
 
 /* FORM AT THE END */
 .form-container {
-  padding: 100px;
-  background-color: aquamarine;
+  padding: 50px;
+  background-color: #222422;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 79vh;
+  padding-top: 150px;
   /*display: none; /*EDIT LATER*/
+}
+
+.form-box {
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid #1ecd97;
+  color: #1ecd97;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .submit-container {
@@ -144,9 +159,21 @@
 }
 
 .submit-button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 20px;
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid #1ecd97;
+  color: #1ecd97;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background: #1ecd97;
+  color: #333;
 }
 
 /* hide class */

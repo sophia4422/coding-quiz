@@ -271,6 +271,7 @@ const renderForm = () => {
   //create input
   const input = document.createElement("input");
   //18. set id attribute for input
+  input.setAttribute("class", "form-box");
   input.setAttribute("id", "full-name-input");
   input.setAttribute("placeholder", "Enter full name");
 
