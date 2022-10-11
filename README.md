@@ -22,6 +22,13 @@ Your scores are saved into local storage and can be viewed on the 'Highscores' p
 
 ![Quiz Homepage](./assets/images/highscores.png)
 
+# Contact
+
+Contact me here:
+
+- https://www.linkedin.com/in/sophia-wall/
+- sophiapwall@yahoo.co.uk
+
 <details closed>
 <summary><b>Expand to read about how my quiz used to look (when I only had 4 weeks coding experience)</b></summary>
 <br>

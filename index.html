@@ -14,6 +14,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -30,13 +34,17 @@
       <section class="section-container" id="start-quiz-banner">
         <!-- section will have an id called #start-quiz-banner-->
         <!-- section will contain a h1, description and a div with a button inside-->
-        <h1 class="title">Music Quiz</h1>
-        <p class="quiz-descrip">
+        <h1 class="title animate__animated animate__pulse">Music Quiz</h1>
+        <p class="quiz-descrip animate__animated animate__pulse">
           This quiz will test your knowledge on popular musicians. Can you beat
           the timer?
         </p>
         <div>
-          <button type="button" class="start-button" id="start-btn">
+          <button
+            type="button"
+            class="start-button animate__animated animate__pulse"
+            id="start-btn"
+          >
             Press Play
             <!-- when you click the button it calls the function startQuiz which will remove the <section> and replace with questions-->
           </button>
