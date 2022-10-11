@@ -35,7 +35,7 @@
   padding-top: 80px;
   display: flex;
   width: 100%;
-  height: 89vh;
+  height: 95vh;
   align-items: center;
   flex-direction: column;
   background-color: #222422;
@@ -72,8 +72,8 @@
 }
 
 .home-image {
-  height: 45vh;
-  position: absolute;
+  height: 42vh;
+  position: fixed;
   bottom: 5vh;
 }
 
@@ -98,7 +98,7 @@
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 79vh;
+  height: 82vh;
   /*display: none; /* CHANGE LATER */
 }
 
@@ -200,6 +200,8 @@
 .footer {
   display: flex;
   background-color: #1ecd97;
+  position: fixed;
+  width: 100%;
   height: 5vh;
   align-items: center;
   justify-content: space-evenly;

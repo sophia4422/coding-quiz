@@ -135,21 +135,6 @@ const handleOptionClick = (event) => {
         renderForm();
       }
     }, 1000);
-
-    //   if (questionIndex < questions.length - 1) {
-    //     // if not last question
-
-    //     questionIndex += 1;
-
-    //     renderQuestion();
-    //   } else {
-    //     // stop timer
-    //     clearInterval(timerId);
-
-    //     renderForm();
-    //   }
-    //   1000
-    // }
   }
 };
 
