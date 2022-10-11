@@ -4,6 +4,10 @@ This challenge was to create an interactive, timed quiz using HTML, CSS and Java
 
 Click here to see the deployed page: https://sophia4422.github.io/coding-quiz/
 
+<details closed>
+<summary><b>To read about how my quiz used to be (when I only had 4 weeks coding experience) see here:</summary>
+<br>
+
 ![Quiz Homepage](./assets/images/quiz-homepage.png)
 
 # User Journey
@@ -106,3 +110,17 @@ I created this flow chart below to map out what areas were working and not worki
 Below is my final flow chart to show the completed parts and areas of improvement:
 
 ![Final Flowchart](./assets/images/final-quiz.png)
+
+</details>
+
+# Quiz Theme
+
+The styling of the quiz is inspired by Spotify. I have used their housestyle colours and I have incorporated a similar font to the one they use.
+
+# How to Play
+
+The aim of the quiz is to answer the questions correctly in as little time as possible.
+You are given 10 seconds for every question. However, if you answer a question incorrectly, 10 seconds is deducted from the timer.
+The time remaining on the clock when you complete the quiz becomes your score. Therefore, the more time remaining = a high score.
+
+Your scores are saved into local storage and can be viewed on the 'Highscores' page. Clearing the highscores will clear your local storage.
