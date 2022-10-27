@@ -87,7 +87,7 @@ const displayScores = () => {
     });
 
     document.getElementById("restart").addEventListener("click", function () {
-      document.location.href = "/index.html";
+      document.location.href = "./index.html";
     });
   }
 };
