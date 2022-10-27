@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sophia's Quiz</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- contains a nav bar-->
+      <nav class="navbar">
+        <!-- nav bar is a flex box that contains two anchor tags 'home' and 'highscores'-->
+        <a class="nav-button" href="./index.html">Home</a>
+        <a class="nav-button" href="./highscores.html">High Scores</a>
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <!-- main section-->
+      <section class="section-container" id="start-quiz-banner">
+        <!-- section will have an id called #start-quiz-banner-->
+        <!-- section will contain a h1, description and a div with a button inside-->
+        <h1 class="title animate__animated animate__pulse">Music Quiz</h1>
+        <p class="quiz-descrip animate__animated animate__pulse">
+          This quiz will test your knowledge on popular musicians. Can you beat
+          the timer?
+        </p>
+        <div>
+          <button
+            type="button"
+            class="start-button animate__animated animate__pulse"
+            id="start-btn"
+          >
+            Press Play
+            <!-- when you click the button it calls the function startQuiz which will remove the <section> and replace with questions-->
+          </button>
+        </div>
+
+        <img
+          class="home-image"
+          src="./assets/images/edit.png"
+          alt="group picture"
+        />
+      </section>
+      <!-- This section will be for the form at the end -->
+      <!-- <section id="form-section" class="form-container">
+        <form id="form-box" class="form-box">
+          <div id="full-name">
+            <label id="label-name">Name</label>
+            <input type="text" id="full-name-input" class="full-name-input" placeholder="name" />
+          </div>
+          <div class="submit-container" id="submit-box">
+            <button class="submit-button" id="button-submit">Submit</button>
+          </div>
+        </form>
+      </section> -->
+
+      <!-- <section class="section-container" id="game-over-banner">
+
+        <h1 class="title" id="game-over-title">Game Over</h1>
+        <p class="quiz-descrip" id="game-over-para">
+          Oops! You ran out of time! Want to try again?
+        </p>
+        <button type="button" class="start-button" id="start-again">
+            Start Quiz
+            </button>
+      </section> -->
+    </main>
+    <footer class="footer">
+      <h3>
+        Insp by Spotify
+        <a
+          class="social-icon"
+          title="Sophia Spotify"
+          href="https://open.spotify.com/user/nnujjzugl8ooqquryq0sfnx1t?si=b01b881ff3344940"
+          target="_blank"
+        >
+          <i class="fa-brands fa-spotify"></i>
+        </a>
+      </h3>
+      <h3>
+        Produced by Sophia
+        <a
+          class="social-icon"
+          title="Github Sophia"
+          href="https://github.com/sophia4422"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          class="social-icon"
+          title="LinkedIn Sophia Wall"
+          href="https://www.linkedin.com/in/sophia-wall/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </h3>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./assets/index.js" async defer></script>
+  </body>
+</html>
