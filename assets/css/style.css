@@ -216,6 +216,7 @@
 
 .social-icon {
   color: #222422;
+  text-decoration: none;
 }
 
 .social-icon:hover {
